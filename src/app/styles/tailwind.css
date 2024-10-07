@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply bg-transparent text-white font-semibold py-2 px-4 border border-gold rounded transition duration-300;
+  }
+  .btn:hover {
+    @apply bg-gold text-black border-transparent;
+  }
+}
+
+/* Add any other custom Tailwind styles here */

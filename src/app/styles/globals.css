@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --color-background: #000000;
+  --color-text: #FFFFFF;
+  --color-accent: #FFD700;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-gold {
+  color: var(--color-accent);
+}
+
+.bg-gold {
+  background-color: var(--color-accent);
+}
+
+.border-gold {
+  border-color: var(--color-accent);
+}
+
+.hover\:text-gold:hover {
+  color: var(--color-accent);
+}
+
+.hover\:bg-gold:hover {
+  background-color: var(--color-accent);
+}
+
+.hover\:border-gold:hover {
+  border-color: var(--color-accent);
+}
+
+.shadow-gold {
+  box-shadow: 0 0 10px var(--color-accent);
+}
+
+/* Add any other global styles here */

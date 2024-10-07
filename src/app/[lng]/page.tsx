@@ -2,15 +2,17 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import ServiceCard from './components/ServiceCard';
-import Gallery from './components/Gallery';
-import TestimonialSection from './components/Testimonial';
-import CharterService from './components/CharterService';
-import Footer from './components/Footer';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import ServiceCard from '../components/ServiceCard';
+import Gallery from '../components/Gallery';
+import TestimonialSection from '../components/Testimonial';
+import CharterService from '../components/CharterService';
+import Footer from '../components/Footer';
 
-const Home: React.FC = () => {
+export default function Home({ params: { lng } }: { params: { lng: string } }) {
+  // The 'lng' parameter is used by the i18n provider in the parent component
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t } = useTranslation();
 
   return (
@@ -45,6 +47,4 @@ const Home: React.FC = () => {
       <Footer />
     </main>
   );
-};
-
-export default Home;
+}
