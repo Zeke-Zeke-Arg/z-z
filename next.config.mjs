@@ -4,7 +4,6 @@ import { languages } from './src/app/i18n/settings.mjs';
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  output: 'export',
   trailingSlash: true,
   async rewrites() {
     return [
