@@ -1,38 +1,51 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import Expandable from './animata/carousel/expandable';
+import caceriaImage from '../assets/images/caceria.jpg';
+import caceria2Image from '../assets/images/caceria2.jpg';
+import caceria3Image from '../assets/images/caceria3.jpg';
+import cazadorImage from '../assets/images/cazador.jpg';
+import ServiceCard from './ServiceCard';
 
 const Gallery: React.FC = () => {
   const { t } = useTranslation();
 
   const images = [
-    { src: '/images/hunting.jpeg', alt: t('Luxury Lodging') },
-    { src: '/images/hunting.jpeg', alt: t('Exclusive Hunting Areas') },
-    { src: '/images/hunting.jpeg', alt: t('Client Experiences') },
-    { src: '/images/hunting.jpeg', alt: t('Scenic Views') },
+    { image: caceriaImage, title: t('Luxury Lodging') },
+    { image: caceria2Image, title: t('Exclusive Hunting Areas') },
+    { image: caceria3Image, title: t('Client Experiences') },
+    { image: cazadorImage, title: t('Scenic Views') },
   ];
 
   return (
-    <section id="gallery" className="py-16 bg-black">
+    <section id="gallery" className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">{t('Gallery')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {images.map((img, index) => (
-            <div key={index} className="relative h-64 overflow-hidden rounded-lg">
-              <Image
-                src={img.src}
-                alt={img.alt}
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-300 hover:scale-110"
+        <h2 className="text-4xl font-bold text-center mb-12 text-text font-serif">{t('Gallery')}</h2>
+        <div className="flex flex-col md:flex-row h-[600px]"> {/* Added fixed height */}
+          <div className="w-full md:w-3/5 mb-8 md:mb-0 md:pr-4 h-full"> {/* Added h-full */}
+            <Expandable list={images} autoPlay={true} className="w-full h-full" /> {/* Added h-full */}
+          </div>
+          <div className="w-full md:w-2/5 md:pl-4 h-full flex flex-col"> {/* Added h-full and flex flex-col */}
+            <div className="flex flex-col space-y-8 h-full justify-between"> {/* Added h-full and justify-between */}
+              <ServiceCard
+                icon="🕊️"
+                title={t('Pigeon Hunting')}
+                description={t('Experience unique pigeon hunting and build relationships with farm owners.')}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-lg font-semibold p-4">{img.alt}</p>
-              </div>
+              <ServiceCard
+                icon="🏨"
+                title={t('Luxury Accommodations')}
+                description={t('Enjoy 5-star lodging with en-suite bathrooms, gym, pool, and fire-pit.')}
+              />
+              <ServiceCard
+                icon="🏞️"
+                title={t('Exclusive Land')}
+                description={t('Hunt on our privately owned land for a truly exclusive experience.')}
+              />
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

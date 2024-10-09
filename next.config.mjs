@@ -4,21 +4,30 @@ import { languages } from './src/app/i18n/settings.mjs';
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  i18n: {
-    defaultLocale: 'en',
-    locales: languages,
-  },
+  output: 'export',
+  trailingSlash: true,
   async rewrites() {
     return [
-      {
-        source: '/:lng',
-        destination: '/',
-      },
-      {
-        source: '/:lng/:path*',
-        destination: '/:path*',
-      },
+      ...languages.map((lng) => ({
+        source: `/${lng}`,
+        destination: `/${lng}/index.html`,
+      })),
+      ...languages.map((lng) => ({
+        source: `/${lng}/:path*`,
+        destination: `/${lng}/:path*.html`,
+      })),
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+    unoptimized: true,
   },
 };
 
