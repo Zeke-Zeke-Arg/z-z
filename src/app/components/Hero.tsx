@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center text-white">
-      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
       <Image
         src={heroImage}
         alt="Hero background"

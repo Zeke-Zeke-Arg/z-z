@@ -1,11 +1,11 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { getOptions } from '../app/i18n/settings.mjs';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 const resources = {
   en: {
-      translation: {
-        "Welcome to Z&Z": "Welcome to Z&Z",
+    translation: {
+      "Welcome to Z&Z": "Welcome to Z&Z",
         "Experience the Pinnacle of Hunting Excellence": "Experience the Pinnacle of Hunting Excellence",
         "Indulge in the perfect blend of luxury accommodations and high-volume bird hunting": "Indulge in the perfect blend of luxury accommodations and high-volume bird hunting",
         "Explore More": "Explore More",
@@ -41,12 +41,21 @@ const resources = {
         "Contact Us": "Contact Us",
         "Email": "Email",
         "Phone": "Phone",
-        "Z&Z Luxury Hunting. All rights reserved.": "Z&Z Luxury Hunting. All rights reserved."
-      }
-    },
-    es: {
-      translation: {
-        "Welcome to Z&Z": "Bienvenido a Z&Z",
+        "Z&Z Luxury Hunting. All rights reserved.": "Z&Z Luxury Hunting. All rights reserved.",
+        "Dove hunting": "Dove hunting",
+        "Córdoba has for many years been reputed to be the best place in the world for dove hunting. Everyone who visits Córdoba is amazed by the number of doves they see and the size of the flocks for high volume dove hunting, the concentration can vary throughout the year, Zeke & Zeke makes sure you kill as many as you want , this is due to our non- stop scauting, great knowledge and the experience gained over the years.": "Córdoba has for many years been reputed to be the best place in the world for dove hunting. Everyone who visits Córdoba is amazed by the number of doves they see and the size of the flocks for high volume dove hunting, the concentration can vary throughout the year, Zeke & Zeke makes sure you kill as many as you want , this is due to our non- stop scauting, great knowledge and the experience gained over the years.",
+        "Dove Hunting": "Dove Hunting",
+        "Our Accommodations": "Our Accommodations",
+        "Escape to our accommodations, designed for relaxation and unforgettable moments. Unwind, create memories, and enjoy a peaceful atmosphere, far from daily stress.": "Escape to our accommodations, designed for relaxation and unforgettable moments. Unwind, create memories, and enjoy a peaceful atmosphere, far from daily stress.",
+        "Our Rooms": "Our Rooms",
+        "Relax in comfort at our lodge with six double rooms, each with en-suite bathrooms and air conditioning. Enjoy stunning mountain views, sunsets, and unwind by the fire pit or heated outdoor pool. Perfect for private hunting retreats, accommodating up to 12 guests.": "Relax in comfort at our lodge with six double rooms, each with en-suite bathrooms and air conditioning. Enjoy stunning mountain views, sunsets, and unwind by the fire pit or heated outdoor pool. Perfect for private hunting retreats, accommodating up to 12 guests.",
+        "Relaxation": "Relaxation",
+        "After a long day, unwind and recharge in complete comfort. Our relaxation services are available daily, providing the perfect way to ease into the evening and enhance your stay.": "After a long day, unwind and recharge in complete comfort. Our relaxation services are available daily, providing the perfect way to ease into the evening and enhance your stay."
+    }
+  },
+  es: {
+    translation: {
+    "Welcome to Z&Z": "Bienvenido a Z&Z",
         "Experience the Pinnacle of Hunting Excellence": "Experimente la Excelencia en Caza",
         "Indulge in the perfect blend of luxury accommodations and high-volume bird hunting": "Disfrute de la perfecta combinación de alojamientos de lujo y caza de aves de alto volumen",
         "Explore More": "Explorar Más",
@@ -82,19 +91,32 @@ const resources = {
         "Contact Us": "Contáctenos",
         "Email": "Correo Electrónico",
         "Phone": "Teléfono",
-        "Z&Z Luxury Hunting. All rights reserved.": "Z&Z Caza de Lujo. Todos los derechos reservados."
-      }
+        "Z&Z Luxury Hunting. All rights reserved.": "Z&Z Caza de Lujo. Todos los derechos reservados.",
+        "Dove hunting": "Caza de palomas",
+        "Córdoba has for many years been reputed to be the best place in the world for dove hunting. Everyone who visits Córdoba is amazed by the number of doves they see and the size of the flocks for high volume dove hunting, the concentration can vary throughout the year, Zeke & Zeke makes sure you kill as many as you want , this is due to our non- stop scauting, great knowledge and the experience gained over the years.": "Córdoba ha sido considerada durante muchos años como el mejor lugar del mundo para la caza de palomas. Todos los que visitan Córdoba quedan asombrados por la cantidad de palomas que ven y el tamaño de las bandadas para la caza de palomas de alto volumen. La concentración puede variar a lo largo del año, pero Zeke & Zeke se asegura de que mates tantas como quieras, esto se debe a nuestro scouting constante, gran conocimiento y la experiencia adquirida a lo largo de los años.",
+        "Dove Hunting": "Caza de Palomas",
+        "Our Accommodations": "Nuestros Alojamientos",
+        "Escape to our accommodations, designed for relaxation and unforgettable moments. Unwind, create memories, and enjoy a peaceful atmosphere, far from daily stress.": "Escápese a nuestros alojamientos, diseñados para la relajación y momentos inolvidables. Relájese, cree recuerdos y disfrute de una atmósfera tranquila, lejos del estrés diario.",
+        "Our Rooms": "Nuestras Habitaciones",
+        "Relax in comfort at our lodge with six double rooms, each with en-suite bathrooms and air conditioning. Enjoy stunning mountain views, sunsets, and unwind by the fire pit or heated outdoor pool. Perfect for private hunting retreats, accommodating up to 12 guests.": "Relájese con comodidad en nuestro lodge con seis habitaciones dobles, cada una con baño privado y aire acondicionado. Disfrute de impresionantes vistas a las montañas, puestas de sol y relájese junto a la fogata o en la piscina exterior climatizada. Perfecto para retiros de caza privados, con capacidad para hasta 12 huéspedes.",
+        "Relaxation": "Relajación",
+        "After a long day, unwind and recharge in complete comfort. Our relaxation services are available daily, providing the perfect way to ease into the evening and enhance your stay.": "Después de un largo día, relájese y recargue energías con total comodidad. Nuestros servicios de relajación están disponibles diariamente, proporcionando la manera perfecta de relajarse por la noche y mejorar su estancia."
     }
-  };
+  }
+};
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    ...getOptions(),
     resources,
-    react: {
-      useSuspense: false
-    }
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+    detection: {
+      order: ['navigator'],
+    },
   });
 
 export default i18n;

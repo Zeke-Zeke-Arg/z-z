@@ -20,15 +20,15 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section id="gallery" className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-text font-serif">{t('Gallery')}</h2>
-        <div className="flex flex-col md:flex-row h-[600px]"> {/* Added fixed height */}
-          <div className="w-full md:w-3/5 mb-8 md:mb-0 md:pr-4 h-full"> {/* Added h-full */}
-            <Expandable list={images} autoPlay={true} className="w-full h-full" /> {/* Added h-full */}
+    <section id="gallery" className="h-screen my-10 py-10 bg-background">
+      <div className="h-full container mx-auto px-4">
+          {/* <h2 className="text-4xl font-bold text-center mb-12 text-text font-serif">{t('Gallery')}</h2> */}
+        <div className="flex flex-col md:flex-row h-full">
+          <div className="w-full md:w-3/5 mb-8 md:mb-0 md:pr-4 h-full">
+            <Expandable list={images} autoPlay={true} className="w-full h-full" />
           </div>
-          <div className="w-full md:w-2/5 md:pl-4 h-full flex flex-col"> {/* Added h-full and flex flex-col */}
-            <div className="flex flex-col space-y-8 h-full justify-between"> {/* Added h-full and justify-between */}
+          <div className="w-full md:w-2/5 md:pl-4 h-full flex flex-col">
+            <div className="flex flex-col space-y-8 h-full justify-between">
               <ServiceCard
                 icon="🕊️"
                 title={t('Pigeon Hunting')}

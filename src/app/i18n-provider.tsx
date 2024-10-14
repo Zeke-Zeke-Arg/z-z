@@ -2,24 +2,18 @@
 
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n/config';
-import { useEffect } from 'react';
-import { useParams } from 'next/navigation';
-import { getOptions } from './i18n/settings.mjs';
+import { useEffect, useState } from 'react';
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const params = useParams();
-  const lng = params?.lng as string;
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    if (lng) {
-      i18n.changeLanguage(lng);
-    }
-  }, [lng]);
+    setIsClient(true);
+  }, []);
 
-  useEffect(() => {
-    const options = getOptions(lng);
-    i18n.init(options);
-  }, [lng]);
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
     <I18nextProvider i18n={i18n}>

@@ -13,13 +13,11 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-  params: { lng }
 }: {
   children: React.ReactNode;
-  params: { lng: string };
 }) {
   return (
-    <html lang={lng}>
+    <html lang="en">
       <body className={inter.className}>
         <I18nProvider>
           {children}

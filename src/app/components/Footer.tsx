@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-black text-white py-12 ">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -29,15 +29,9 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-4">{t('Contact Us')}</h4>
-            <p>{t('Email')}: info@zandzluxuryhunting.com</p>
-            <p>{t('Phone')}: +1 (123) 456-7890</p>
-            <div className="mt-4 space-x-4">
-              {['facebook', 'twitter', 'instagram'].map((social) => (
-                <a key={social} href={`https://${social}.com`} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold">
-                  <i className={`fab fa-${social} text-2xl`}></i>
-                </a>
-              ))}
-            </div>
+            <p>{t('Phone')}: +549 3513721512 - +549 3525532959</p>
+            <p>{t('Instagram')}: @ZK.ZEKE</p>
+            <p>{t('Facebook')}: ZEKE & ZEKE</p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">

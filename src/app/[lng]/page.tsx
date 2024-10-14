@@ -1,11 +1,11 @@
-import React from 'react';
-import { languages } from '../i18n/settings.mjs';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Gallery from '../components/Gallery';
-import TestimonialSection from '../components/Testimonial';
-import CharterService from '../components/CharterService';
-import Footer from '../components/Footer';
+import React from "react";
+import { languages } from "../i18n/settings.mjs";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
+import PanZoomGallery from "../components/PanZoomGallery";
+
 
 export function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -22,8 +22,10 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
       <Header />
       <Hero />
       <Gallery />
-      <TestimonialSection />
-      <CharterService />
+      <PanZoomGallery />
+      {/* <ProductOverviewCarousel /> */}
+      {/* <TestimonialSection /> */}
+      {/* <CharterService /> */}
       <Footer />
     </main>
   );
