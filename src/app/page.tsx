@@ -7,6 +7,7 @@ import Gallery from "./components/Gallery";
 // import CharterService from "./components/CharterService";
 import Footer from "./components/Footer";
 import PanZoomGallery from "./components/PanZoomGallery";
+import ContactForm from "./components/ContactForm";
 // import ProductOverviewCarousel from "./components/ProductOverviewCarousel";
 
 const Home: React.FC = () => {
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
       <Hero />
       <Gallery />
       <PanZoomGallery />
+      <ContactForm />
       {/* <ProductOverviewCarousel /> */}
       {/* <TestimonialSection /> */}
       {/* <CharterService /> */}
