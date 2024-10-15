@@ -14,8 +14,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) =
 
   return (
     <div className="bg-black text-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-gold">
-      <div className="text-gold text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-2">{t(title)}</h3>
+      <div className="flex items-center mb-4">
+      <div className="text-gold text-3xl px-2">{icon}</div>
+      <h3 className="text-xl font-semibold mb-2 px-2">{t(title)}</h3>
+      </div>
       <p className="text-gray-300">{t(description)}</p>
     </div>
   );

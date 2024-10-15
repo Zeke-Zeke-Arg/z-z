@@ -57,3 +57,20 @@ export const lodge = [
     alt: t("Relaxation"),
   },
 ];
+
+export const aboutUsDescription  =t(`Zeke & Zeke Outfitters was established in 2022, leveraging over 35 years of combined experience in Argentina's dove hunting industry.
+
+Drawing from our extensive backgrounds working with some of the country's top hunting lodges, we've created a new standard for delivering premium hunting adventures.
+  
+With more than 20 years of experience in hunting and fishing, we've helped hunters achieve world-record results by utilizing our deep expertise and close relationships with local farm owners, securing access to the best hunting grounds.
+  
+Our mission is to offer an unparalleled hunting experience, combining our passion for the sport with a personalized approach that guarantees success and enjoyment for every guest.
+  
+At Zeke & Zeke Outfitters, you can expect nothing less than excellence in every aspect of your journey.`)
+
+export const navItems = [
+  { name: 'About Us', href: '#about-us' },
+  { name: 'Services', href: '#our-services' },
+  { name: 'Lodge', href: '#lodge' },
+  { name: 'Contact', href: '#contact-form' },
+];

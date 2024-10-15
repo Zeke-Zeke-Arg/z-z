@@ -8,19 +8,27 @@ import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import PanZoomGallery from "./components/PanZoomGallery";
 import ContactForm from "./components/ContactForm";
-// import ProductOverviewCarousel from "./components/ProductOverviewCarousel";
+import ProductOverview from "./components/ProductOverview";
+import cazadorImage from '@/app/assets/images/E Shooting 6.jpg';
+import { aboutUsDescription } from "@/libs/data";
 
 const Home: React.FC = () => {
+
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
       <Hero />
+      <ProductOverview
+        id="about-us"
+        title={'About us'}
+        description={aboutUsDescription}
+        image={cazadorImage}
+        alt={'about us'}
+        imageSide="right"
+      />
       <Gallery />
       <PanZoomGallery />
-      <ContactForm />
-      {/* <ProductOverviewCarousel /> */}
-      {/* <TestimonialSection /> */}
-      {/* <CharterService /> */}
+      <ContactForm id="contact-form" />
       <Footer />
     </main>
   );

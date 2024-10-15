@@ -21,7 +21,7 @@ const resources = {
       "Exclusive Land": "Exclusive Land",
       "Hunt on our privately owned land for a truly exclusive experience.":
         "Hunt on our privately owned land for a truly exclusive experience.",
-      Gallery: "Gallery",
+      "Our Experience": "Our Experience",
       "Luxury Lodging": "Luxury Lodging",
       "Exclusive Hunting Areas": "Exclusive Hunting Areas",
       "Client Experiences": "Client Experiences",
@@ -88,6 +88,12 @@ const resources = {
         "Gun rental, hunting license, and 1000-2000 shells included",
       "Optional add-ons for non-hunters and extra amenities":
         "Optional add-ons for non-hunters and extra amenities",
+      "Our Lodge": "Our Lodge",
+      "Zeke & Zeke Outfitters was established in 2022, leveraging over 35 years of combined experience in Argentina's dove hunting industry. Drawing from our extensive backgrounds working with some of the country's top hunting lodges, we've created a new standard for delivering premium hunting adventures. With more than 20 years of experience in hunting and fishing, we've helped hunters achieve world-record results by utilizing our deep expertise and close relationships with local farm owners, securing access to the best hunting grounds. Our mission is to offer an unparalleled hunting experience, combining our passion for the sport with a personalized approach that guarantees success and enjoyment for every guest. At Zeke & Zeke Outfitters, you can expect nothing less than excellence in every aspect of your journey.":
+        "Zeke & Zeke Outfitters was established in 2022, leveraging over 35 years of combined experience in Argentina's dove hunting industry. Drawing from our extensive backgrounds working with some of the country's top hunting lodges, we've created a new standard for delivering premium hunting adventures. With more than 20 years of experience in hunting and fishing, we've helped hunters achieve world-record results by utilizing our deep expertise and close relationships with local farm owners, securing access to the best hunting grounds. Our mission is to offer an unparalleled hunting experience, combining our passion for the sport with a personalized approach that guarantees success and enjoyment for every guest. At Zeke & Zeke Outfitters, you can expect nothing less than excellence in every aspect of your journey.",
+      "Enjoy world-class pigeon hunting across vast agricultural lands, offering unmatched bird activity and guided hunts. Experience personalized services and immersive outdoor action for all skill levels.":"Enjoy world-class pigeon hunting across vast agricultural lands, offering unmatched bird activity and guided hunts. Experience personalized services and immersive outdoor action for all skill levels.",
+      "Indulge in premium lodging featuring spacious suites, gourmet dining, and modern amenities. After a day in the field, relax in comfort with access to a pool, gym, and serene surroundings.": "Indulge in premium lodging featuring spacious suites, gourmet dining, and modern amenities. After a day in the field, relax in comfort with access to a pool, gym, and serene surroundings.",
+      "Hunt on privately-owned, expansive properties reserved exclusively for our clients. These well-maintained areas provide a secluded and rich hunting experience, away from public access.":"Hunt on privately-owned, expansive properties reserved exclusively for our clients. These well-maintained areas provide a secluded and rich hunting experience, away from public access.",
     },
   },
   es: {
@@ -108,7 +114,7 @@ const resources = {
       "Exclusive Land": "Terreno Exclusivo",
       "Hunt on our privately owned land for a truly exclusive experience.":
         "Cace en nuestro terreno privado para una experiencia verdaderamente exclusiva.",
-      Gallery: "Galería",
+      "Our Experience": "Nuestra experiencia",
       "Luxury Lodging": "Alojamiento de Lujo",
       "Exclusive Hunting Areas": "Áreas de Caza Exclusivas",
       "Client Experiences": "Experiencias de Clientes",
@@ -176,7 +182,12 @@ const resources = {
         "Alquiler de armas, licencia de caza y 1000-2000 cartuchos incluidos",
       "Optional add-ons for non-hunters and extra amenities":
         "Opciones adicionales para no cazadores y servicios extra",
-    },
+      "Our Lodge": "Nuestro Lodge",
+      "Zeke & Zeke Outfitters was established in 2022, leveraging over 35 years of combined experience in Argentina's dove hunting industry. Drawing from our extensive backgrounds working with some of the country's top hunting lodges, we've created a new standard for delivering premium hunting adventures. With more than 20 years of experience in hunting and fishing, we've helped hunters achieve world-record results by utilizing our deep expertise and close relationships with local farm owners, securing access to the best hunting grounds. Our mission is to offer an unparalleled hunting experience, combining our passion for the sport with a personalized approach that guarantees success and enjoyment for every guest. At Zeke & Zeke Outfitters, you can expect nothing less than excellence in every aspect of your journey.": "Zeke & Zeke Outfitters se estableció en 2022, aprovechando más de 35 años de experiencia combinada en la industria de la caza de palomas en Argentina. Basándonos en nuestros amplios antecedentes trabajando con algunos de los mejores lodges de caza del país, hemos creado un nuevo estándar para ofrecer aventuras de caza premium. Con más de 20 años de experiencia en caza y pesca, hemos ayudado a cazadores a lograr resultados de récord mundial al aprovechar nuestra profunda experiencia y estrechas relaciones con los propietarios de fincas locales, asegurando acceso a los mejores terrenos de caza. Nuestra misión es ofrecer una experiencia de caza inigualable, combinando nuestra pasión por el deporte con un enfoque personalizado que garantiza éxito y disfrute para cada invitado. En Zeke & Zeke Outfitters, puedes esperar nada menos que excelencia en cada aspecto de tu travesía.",
+    "Enjoy world-class pigeon hunting across vast agricultural lands, offering unmatched bird activity and guided hunts. Experience personalized services and immersive outdoor action for all skill levels.":"Disfruta de la caza de palomas de clase mundial en vastas tierras agrícolas, que ofrecen una actividad aviar inigualable y cacerías guiadas. Experimenta servicios personalizados y una acción al aire libre inmersiva para todos los niveles de habilidad.",
+    "Indulge in premium lodging featuring spacious suites, gourmet dining, and modern amenities. After a day in the field, relax in comfort with access to a pool, gym, and serene surroundings.":"Disfruta de un alojamiento de primera clase que ofrece suites amplias, gastronomía gourmet y comodidades modernas. Después de un día en el campo, relájate con comodidad con acceso a una piscina, gimnasio y un entorno sereno.",
+    "Hunt on privately-owned, expansive properties reserved exclusively for our clients. These well-maintained areas provide a secluded and rich hunting experience, away from public access.":"Caza en propiedades privadas y expansivas reservadas exclusivamente para nuestros clientes. Estas áreas bien mantenidas ofrecen una experiencia de caza apartada y rica, lejos del acceso público."
+  },
   },
 };
 

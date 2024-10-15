@@ -20,9 +20,9 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section id="gallery" className="h-screen my-10 py-10 bg-background">
+    <section id="our-services" className="h-screen mt-10 py-10 bg-background">
       <div className="h-full container mx-auto px-4">
-          {/* <h2 className="text-4xl font-bold text-center mb-12 text-text font-serif">{t('Gallery')}</h2> */}
+          <h2 className="p-6 -mt-20 text-4xl font-bold text-center text-text font-serif">{t('Our Experience')}</h2>
         <div className="flex flex-col md:flex-row h-full">
           <div className="w-full md:w-3/5 mb-8 md:mb-0 md:pr-4 h-full">
             <Expandable list={images} autoPlay={true} className="w-full h-full" />
@@ -32,17 +32,17 @@ const Gallery: React.FC = () => {
               <ServiceCard
                 icon="🕊️"
                 title={t('Pigeon Hunting')}
-                description={t('Experience unique pigeon hunting and build relationships with farm owners.')}
+                description={t('Enjoy world-class pigeon hunting across vast agricultural lands, offering unmatched bird activity and guided hunts. Experience personalized services and immersive outdoor action for all skill levels.')}
               />
               <ServiceCard
                 icon="🏨"
                 title={t('Luxury Accommodations')}
-                description={t('Enjoy 5-star lodging with en-suite bathrooms, gym, pool, and fire-pit.')}
+                description={t('Indulge in premium lodging featuring spacious suites, gourmet dining, and modern amenities. After a day in the field, relax in comfort with access to a pool, gym, and serene surroundings.')}
               />
               <ServiceCard
                 icon="🏞️"
                 title={t('Exclusive Land')}
-                description={t('Hunt on our privately owned land for a truly exclusive experience.')}
+                description={t('Hunt on privately-owned, expansive properties reserved exclusively for our clients. These well-maintained areas provide a secluded and rich hunting experience, away from public access.')}
               />
             </div>
           </div>
