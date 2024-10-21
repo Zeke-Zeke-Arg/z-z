@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import heroImage from '../assets/images/hero-image.jpg';
+import heroImage from '../assets/images/hero-image.webp';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
