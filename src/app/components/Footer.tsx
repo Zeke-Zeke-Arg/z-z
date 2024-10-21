@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
-import { navItems } from '@/libs/data';
-import { FacebookIcon, InstagramIcon, PhoneIcon } from '@/libs/icons';
-import logo from '@/app/assets/images/footer-logo.webp';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useTranslation } from "react-i18next";
+import { navItems } from "@/libs/data";
+import { FacebookIcon, InstagramIcon, PhoneIcon } from "@/libs/icons";
+import logo from "@/app/assets/images/footer-logo.webp";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -16,22 +16,26 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <Link href={'#home'} scroll>
-            <Image 
-              src={logo} 
-              alt="Z&Z Luxury Hunting Logo" 
-              width={200} 
-              height={100} 
-              className="mb-4"
-            />
+            <Link href={"#home"} scroll>
+              <Image
+                src={logo}
+                alt="Z&Z Luxury Hunting Logo"
+                width={200}
+                height={100}
+                className="mb-4"
+              />
             </Link>
           </div>
           <div>
-            <h4 className="text-xl font-semibold mb-4">{t('Quick Links')}</h4>
+            <h4 className="text-xl font-semibold mb-4">{t("Quick Links")}</h4>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} scroll className="hover:text-gold transition-colors duration-300">
+                  <Link
+                    href={item.href}
+                    scroll
+                    className="hover:text-gold transition-colors duration-300"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -39,23 +43,49 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-xl font-semibold mb-4">{t('Contact Us')}</h4>
+            <h4 className="text-xl font-semibold mb-4">{t("Contact Us")}</h4>
             <div className="flex items-center mb-2">
               <PhoneIcon />
-              <span>+549 3513721512 / +549 3525532959</span>
+              <span className="pl-5">
+                <a
+                  href="https://wa.me/5493513721512"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +549 3513721512
+                </a>{" "}
+                /{" "}
+                <a
+                  href="https://wa.me/5493525532959"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +549 3525532959
+                </a>
+              </span>
             </div>
             <div className="flex items-center mb-2">
               <InstagramIcon />
-              <span>@ZK.ZEKE</span>
+              <a
+                className="pl-5"
+                href="https://www.instagram.com/zk.zeke"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @ zk.zeke
+              </a>{" "}
             </div>
             <div className="flex items-center">
               <FacebookIcon />
-              <span>ZEKE & ZEKE</span>
+              <span className="pl-5">Zeke & Zeke</span>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p>&copy; {new Date().getFullYear()} {t('Z&Z Luxury Hunting. All rights reserved.')}</p>
+          <p>
+            &copy; {new Date().getFullYear()}{" "}
+            {t("Z&Z Luxury Hunting. All rights reserved.")}
+          </p>
         </div>
       </div>
     </footer>
