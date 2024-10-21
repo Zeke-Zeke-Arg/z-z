@@ -1,13 +1,14 @@
-import caceria from '@/app/assets/images/webp/caceria.webp';
-import caceria2 from '@/app/assets/images/webp/caceria2.webp';
-import caceria3 from '@/app/assets/images/webp/caceria3.webp';
-import cazador from '@/app/assets/images/webp/cazador.webp';
-import counter from '@/app/assets/images/webp/palomas.webp';
+import caceria from '@/app/assets/images/caceria.jpg';
+import caceria2 from '@/app/assets/images/caceria2.jpg';
+import caceria3 from '@/app/assets/images/caceria3.jpg';
+import cazador from '@/app/assets/images/cazador.jpg';
+import counter from '@/app/assets/images/palomas.jpg';
 
 
-import diningRoom from "@/app/assets/images/webp/E Dinning room 1.webp";
-import room8 from "@/app/assets/images/webp/E Room 8.webp";
-import jacuzzi from "@/app/assets/images/webp/jacuzzi.webp";
+
+import diningRoom from "@/app/assets/images/E Dinning room 1.jpg";
+import room8 from "@/app/assets/images/E Room 8.jpg";
+import jacuzzi from "@/app/assets/images/jacuzzi.jpg";
 import { t } from 'i18next';
 
 export const doveHunting = [

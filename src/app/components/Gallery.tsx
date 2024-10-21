@@ -3,10 +3,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Expandable from './animata/carousel/expandable';
-import caceriaImage from '../assets/images/webp/caceria.webp';
-import caceria2Image from '../assets/images/webp/caceria2.webp';
-import caceria3Image from '../assets/images/webp/caceria3.webp';
-import cazadorImage from '../assets/images/webp/cazador.webp';
+import caceriaImage from '../assets/images/caceria.jpg';
+import caceria2Image from '../assets/images/caceria2.jpg';
+import caceria3Image from '../assets/images/caceria3.jpg';
+import cazadorImage from '../assets/images/cazador.jpg';
 import ServiceCard from './ServiceCard';
 
 const Gallery: React.FC = () => {

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { navItems } from '@/libs/data';
 import { FacebookIcon, InstagramIcon, PhoneIcon } from '@/libs/icons';
-import logo from '@/app/assets/images/webp/footer-logo.webp';
+import logo from '@/app/assets/images/footer-logo.webp';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -16,6 +16,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
+            <Link href={'#home'} scroll>
             <Image 
               src={logo} 
               alt="Z&Z Luxury Hunting Logo" 
@@ -23,13 +24,14 @@ const Footer: React.FC = () => {
               height={100} 
               className="mb-4"
             />
+            </Link>
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-4">{t('Quick Links')}</h4>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-gold transition-colors duration-300">
+                  <Link href={item.href} scroll className="hover:text-gold transition-colors duration-300">
                     {item.name}
                   </Link>
                 </li>

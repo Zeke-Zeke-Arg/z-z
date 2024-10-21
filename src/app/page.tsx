@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import PanZoomGallery from "./components/PanZoomGallery";
 import ContactForm from "./components/ContactForm";
 import ProductOverview from "./components/ProductOverview";
-import cazadorImage from '@/app/assets/images/webp/about us white.webp';
+import cazadorImage from '@/app/assets/images/about us white.jpg';
 import { aboutUsDescription } from "@/libs/data";
 
 const Home: React.FC = () => {

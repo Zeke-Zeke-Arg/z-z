@@ -3,7 +3,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
-import entradaImage from '../assets/images/webp/Entrada.webp';
+import entradaImage from '@/app/assets/images/Entrada.jpg';
 
 interface ContactFormProps {
   id?: string;
