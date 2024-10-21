@@ -51,6 +51,7 @@ const Footer: React.FC = () => {
                   href="https://wa.me/5493513721512"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors duration-300"
                 >
                   +549 3513721512
                 </a>{" "}
@@ -59,6 +60,7 @@ const Footer: React.FC = () => {
                   href="https://wa.me/5493525532959"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors duration-300"
                 >
                   +549 3525532959
                 </a>
@@ -67,7 +69,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center mb-2">
               <InstagramIcon />
               <a
-                className="pl-5"
+                className="pl-5 hover:text-gold transition-colors duration-300"
                 href="https://www.instagram.com/zk.zeke"
                 target="_blank"
                 rel="noopener noreferrer"
