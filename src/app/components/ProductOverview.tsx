@@ -1,5 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { useTranslation } from "react-i18next";
+
 
 interface ProductOverviewProps {
   id?: string;
@@ -18,17 +20,17 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({
   alt,
   imageSide = "left",
 }) => {
+  const { t } = useTranslation();
   const hasContent = title && description;
 
   const imageContent = (
     <div
       className={`relative ${hasContent ? "w-1/2" : "w-full"} h-full rounded-lg overflow-hidden`}
     >
-      <Image src={image} alt={alt} fill style={{ objectFit: "cover" }} />
+      <Image src={image} alt={t(alt)} fill style={{ objectFit: "cover" }} />
     </div>
   );
   
-
   const textContent = hasContent && (
     <div
       className={`w-1/2 p-8 flex flex-col h-full items-start ${
@@ -36,13 +38,13 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({
       }`}
     >
       <h2 className="text-4xl font-bold mb-6 text-left w-full">
-        <span className="text-white-400">{title}</span>
+        <span className="text-white-400">{t(title)}</span>
       </h2>
       <p
         className="text-gray-300 text-lg mb-8"
         style={{ whiteSpace: "pre-wrap" }}
       >
-        {description}
+        {t(description)}
       </p>
     </div>
   );

@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { navItems } from '@/libs/data';
+import { navItems } from '../../libs/data';
 import logo from '@/app/assets/images/logo.webp'
 
 const Header: React.FC = () => {

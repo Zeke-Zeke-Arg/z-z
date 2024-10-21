@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                     scroll
                     className="hover:text-gold transition-colors duration-300"
                   >
-                    {item.name}
+                    {t(item.name)}
                   </Link>
                 </li>
               ))}
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
           <p>
             &copy; {new Date().getFullYear()}{" "}
-            {t("Z&Z Luxury Hunting. All rights reserved.")}
+            {t("Z&Z Outfiters. All rights reserved.")}
           </p>
         </div>
       </div>

@@ -2,13 +2,41 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { lodge } from "@/libs/data";
 import { useTranslation } from "react-i18next";
 
+import diningRoom from "@/app/assets/images/E Dinning room 1.jpg";
+import room8 from "@/app/assets/images/E Room 8.jpg";
+import jacuzzi from "@/app/assets/images/jacuzzi.jpg";
+
 const PanZoomGallery: React.FC = () => {
+
   const [hoveredTile, setHoveredTile] = useState<number | null>(null);
-  const images = lodge;
   const { t } = useTranslation();
+
+  const lodge = [
+    {
+      title: t("Our Accommodations"),
+      description: t("Escape to our accommodations, designed for relaxation and unforgettable moments. Unwind, create memories, and enjoy a peaceful atmosphere, far from daily stress."),
+      image: diningRoom,
+      alt: t("Our Accommodations"),
+    },
+    {
+      title: t("Our Rooms"),
+      description: t(
+        "Relax in comfort at our lodge with six double rooms, each with en-suite bathrooms and air conditioning. Enjoy stunning mountain views, sunsets, and unwind by the fire pit or heated outdoor pool. Perfect for private hunting retreats, accommodating up to 12 guests."
+      ),
+      image: room8,
+      alt: t("Our Rooms"),
+    },
+    {
+      title: t("Relaxation"),
+      description: t("After a long day, unwind and recharge in complete comfort. Our relaxation services are available daily, providing the perfect way to ease into the evening and enhance your stay."),
+      image: jacuzzi,
+      alt: t("Relaxation"),
+    },
+  ];
+  const images = lodge;
+
 
   const handleMouseEnter = (index: number) => {
     setHoveredTile(index);
