@@ -21,10 +21,13 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({
   const hasContent = title && description;
 
   const imageContent = (
-    <div className={`relative ${hasContent ? "w-1/2" : "w-full"} h-full`}>
-      <Image src={image} alt={alt} layout="fill" objectFit="cover" />
+    <div
+      className={`relative ${hasContent ? "w-1/2" : "w-full"} h-full rounded-lg overflow-hidden`}
+    >
+      <Image src={image} alt={alt} fill style={{ objectFit: "cover" }} />
     </div>
   );
+  
 
   const textContent = hasContent && (
     <div
@@ -32,10 +35,8 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({
         imageSide === "left" ? "items-end" : ""
       }`}
     >
-      <h2
-        className={`-mt-10 text-4xl font-bold mb-6 text-left w-full`}
-      >
-        <span className="text-white-400 ">{title}</span>
+      <h2 className="text-4xl font-bold mb-6 text-left w-full">
+        <span className="text-white-400">{title}</span>
       </h2>
       <p
         className="text-gray-300 text-lg mb-8"
@@ -47,27 +48,29 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({
   );
 
   return (
-    <section id={id} className="pt-16 -mb-20 bg-background h-screen w-full">
-      <div className="container mx-auto px-4">
-        <div className="flex text-white rounded-lg overflow-hidden h-[600px]">
-          {hasContent ? (
-            imageSide === "left" ? (
-              <>
-                {imageContent}
-                {textContent}
-              </>
+    <div id={id} className="overflow-hidden bg-background">
+      <section className="h-screen w-full flex items-center">
+        <div className="container mx-auto px-4">
+          <div className="flex text-white rounded-lg overflow-hidden h-[calc(100vh-80px)]">
+            {hasContent ? (
+              imageSide === "left" ? (
+                <>
+                  {imageContent}
+                  {textContent}
+                </>
+              ) : (
+                <>
+                  {textContent}
+                  {imageContent}
+                </>
+              )
             ) : (
-              <>
-                {textContent}
-                {imageContent}
-              </>
-            )
-          ) : (
-            imageContent
-          )}
+              imageContent
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

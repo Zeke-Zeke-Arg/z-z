@@ -5,13 +5,10 @@ import Image from "next/image";
 import { lodge } from "@/libs/data";
 import { useTranslation } from "react-i18next";
 
-
 const PanZoomGallery: React.FC = () => {
   const [hoveredTile, setHoveredTile] = useState<number | null>(null);
-  const images = lodge
+  const images = lodge;
   const { t } = useTranslation();
-
-  
 
   const handleMouseEnter = (index: number) => {
     setHoveredTile(index);
@@ -33,11 +30,11 @@ const PanZoomGallery: React.FC = () => {
   };
 
   return (
-    <section id="lodge" className="relative pt-20 mb-2 h-screen w-full bg-background overflow-hidden">
-      <h2 className="absolute top-6 left-0 right-0 text-4xl font-bold text-center z-20 text-white text-shadow font-serif">
+    <section id="lodge" className="relative w-full h-screen bg-background overflow-hidden pt-20">
+      <h2 className="text-4xl font-bold text-center mb-8 z-20 text-white text-shadow font-serif">
         {t("Our Lodge")}
       </h2>
-      <div className="flex w-full h-full mt-10">
+      <div className="w-full h-[calc(100%-7rem)] flex">
         {images.map((image, index) => (
           <div
             key={index}
