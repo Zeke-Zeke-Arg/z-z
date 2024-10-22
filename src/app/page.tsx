@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Gallery from "./components/Gallery";
@@ -22,6 +22,18 @@ ${t("With more than 20 years of experience in hunting and fishing, we've helped 
 ${t("Our mission is to offer an unparalleled hunting experience, combining our passion for the sport with a personalized approach that guarantees success and enjoyment for every guest.")}
 
 ${t("At Zeke & Zeke Outfitters, you can expect nothing less than excellence in every aspect of your journey.")}`;
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      window.location.reload();
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   return (
     <main className="min-h-screen flex flex-col">
