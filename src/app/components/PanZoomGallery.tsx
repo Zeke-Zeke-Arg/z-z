@@ -9,7 +9,6 @@ import room8 from "@/app/assets/images/E Room 8.jpg";
 import jacuzzi from "@/app/assets/images/jacuzzi.jpg";
 
 const PanZoomGallery: React.FC = () => {
-
   const [hoveredTile, setHoveredTile] = useState<number | null>(null);
   const { t } = useTranslation();
 
@@ -37,7 +36,6 @@ const PanZoomGallery: React.FC = () => {
   ];
   const images = lodge;
 
-
   const handleMouseEnter = (index: number) => {
     setHoveredTile(index);
   };
@@ -58,15 +56,15 @@ const PanZoomGallery: React.FC = () => {
   };
 
   return (
-    <section id="lodge" className="relative w-full h-screen bg-background overflow-hidden pt-20">
+    <section id="lodge" className="relative w-full min-h-screen bg-background overflow-hidden pt-20">
       <h2 className="text-4xl font-bold text-center mb-8 z-20 text-white text-shadow font-serif">
         {t("Our Lodge")}
       </h2>
-      <div className="w-full h-[calc(100%-7rem)] flex">
+      <div className="w-full h-full flex flex-col md:flex-row">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-1/3 h-full overflow-hidden"
+            className="relative w-full md:w-1/3 h-[33vh] md:h-[calc(100vh-12rem)] overflow-hidden"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}
@@ -80,8 +78,8 @@ const PanZoomGallery: React.FC = () => {
               <Image
                 src={image.image}
                 alt={image.alt}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
               />
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
