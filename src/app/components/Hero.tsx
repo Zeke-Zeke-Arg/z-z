@@ -4,11 +4,13 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import heroImage from '../assets/images/hero-image.webp';
+import Fade from 'react-reveal/Fade';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
+    <Fade bottom duration={1000} delay={200}>
     <section id="home" className="relative h-screen flex items-center justify-center text-white">
       <div className="absolute inset-0 bg-black opacity-35 z-10"></div>
       <Image
@@ -29,6 +31,7 @@ const Hero: React.FC = () => {
         </p>
       </div>
     </section>
+    </Fade>
   );
 };
 

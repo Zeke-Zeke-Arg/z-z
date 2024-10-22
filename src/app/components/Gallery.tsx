@@ -8,6 +8,7 @@ import caceria2Image from '../assets/images/caceria2.jpg';
 import caceria3Image from '../assets/images/caceria3.jpg';
 import cazadorImage from '../assets/images/cazador.jpg';
 import ServiceCard from './ServiceCard';
+import Fade from 'react-reveal/Fade';
 
 const Gallery: React.FC = () => {
   const { t } = useTranslation();
@@ -25,9 +26,12 @@ const Gallery: React.FC = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-text font-serif mb-6 md:mb-8">{t('Our Experience')}</h2>
           <div className="flex flex-col md:flex-row md:h-[calc(100vh-180px)]">
+            <Fade bottom duration={1000} delay={200}>
             <div className="w-full md:w-3/5 mb-6 md:mb-0 md:pr-4 h-[50vh] md:h-full">
               <Expandable list={images} autoPlay={true} className="w-full h-full" />
             </div>
+            </Fade>
+            <Fade right duration={1000} delay={200}>
             <div className="w-full md:w-2/5 md:pl-4 h-full flex flex-col">
               <div className="flex flex-col space-y-4 md:space-y-8 h-full justify-between">
                 <ServiceCard
@@ -47,6 +51,7 @@ const Gallery: React.FC = () => {
                 />
               </div>
             </div>
+            </Fade>
           </div>
         </div>
       </section>

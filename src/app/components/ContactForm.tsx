@@ -4,6 +4,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
 import entradaImage from '../assets/images/Entrada.jpg'
+import Fade from "react-reveal/Fade";
 
 interface ContactFormProps {
   id?: string;
@@ -26,6 +27,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ id }) => {
       />
       <div className="container mx-auto px-4 relative z-20">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          <Fade left duration={1000} delay={200}>
           <div className="w-full md:w-2/3 text-center md:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-4">
               {t("Let's Talk")}
@@ -47,6 +49,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ id }) => {
               </ul>
             </div>
           </div>
+          </Fade>
+<Fade right duration={1000} delay={200}>
           <form className="w-full md:w-1/3 space-y-4 max-w-md mx-auto md:mx-0">
             <input
               type="text"
@@ -75,6 +79,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ id }) => {
               {t("Send")}
             </button>
           </form>
+</Fade>
         </div>
       </div>
     </section>

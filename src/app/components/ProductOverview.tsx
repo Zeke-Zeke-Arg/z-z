@@ -1,6 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { useTranslation } from "react-i18next";
+import Fade from 'react-reveal/Fade';
 
 interface ProductOverviewProps {
   id?: string;
@@ -23,29 +24,33 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({
   const hasContent = title && description;
 
   const imageContent = (
-    <div
-      className={`relative ${hasContent ? "w-full md:w-1/2" : "w-full"} h-[50vh] md:h-full rounded-lg overflow-hidden`}
-    >
-      <Image src={image} alt={t(alt)} fill style={{ objectFit: "cover" }} />
-    </div>
+    <Fade bottom duration={1000} delay={200}>
+      <div
+        className={`relative ${hasContent ? "w-full md:w-1/2" : "w-full"} h-[50vh] md:h-full rounded-lg overflow-hidden`}
+      >
+        <Image src={image} alt={t(alt)} fill style={{ objectFit: "cover" }} />
+      </div>
+    </Fade>
   );
   
   const textContent = hasContent && (
-    <div
-      className={`w-full md:w-1/2 p-8 flex flex-col h-full items-start ${
-        imageSide === "left" ? "md:items-end" : ""
-      }`}
-    >
-      <h2 className="text-4xl font-bold mb-6 text-left w-full">
-        <span className="text-white-400">{t(title)}</span>
-      </h2>
-      <p
-        className="text-gray-300 text-lg mb-8"
-        style={{ whiteSpace: "pre-wrap" }}
+    <Fade bottom duration={1000} delay={400}>
+      <div
+        className={`w-full md:w-1/2 p-8 flex flex-col h-full items-start ${
+          imageSide === "left" ? "md:items-end" : ""
+        }`}
       >
-        {t(description)}
-      </p>
-    </div>
+        <h2 className="text-4xl font-bold mb-6 text-left w-full">
+          <span className="text-white-400">{t(title)}</span>
+        </h2>
+        <p
+          className="text-gray-300 text-lg mb-8"
+          style={{ whiteSpace: "pre-wrap" }}
+        >
+          {t(description)}
+        </p>
+      </div>
+    </Fade>
   );
 
   return (

@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import diningRoom from "@/app/assets/images/E Dinning room 1.jpg";
 import room8 from "@/app/assets/images/E Room 8.jpg";
 import jacuzzi from "@/app/assets/images/jacuzzi.jpg";
+import Fade from "react-reveal/Fade";
 
 const PanZoomGallery: React.FC = () => {
   const [hoveredTile, setHoveredTile] = useState<number | null>(null);
@@ -84,10 +85,12 @@ const PanZoomGallery: React.FC = () => {
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
             <div className="absolute z-20 bottom-[10%] left-0 right-0 text-center text-white text-shadow px-4">
+              <Fade bottom duration={1000} delay={200}>
               <div className="text-2xl mb-2">{image.title}</div>
               <div className="text-sm max-w-xs mx-auto">
                 {image.description}
               </div>
+              </Fade>
             </div>
           </div>
         ))}
