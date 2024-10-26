@@ -24,15 +24,12 @@ ${t("Our mission is to offer an unparalleled hunting experience, combining our p
 ${t("At Zeke & Zeke Outfitters, you can expect nothing less than excellence in every aspect of your journey.")}`;
 
   useEffect(() => {
-    const handleBeforeUnload = () => {
-      window.location.reload();
-    };
+    const homeSection = document.getElementById("home");
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: "smooth" });
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
+      window.history.replaceState(null, "", "/");
+    }
   }, []);
 
   return (
