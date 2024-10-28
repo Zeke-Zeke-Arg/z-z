@@ -24,7 +24,7 @@ const Gallery: React.FC = () => {
     <div id="our-services" className="overflow-hidden bg-background">
       <section className="min-h-screen w-full flex items-center py-10">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-text font-serif mb-6 md:mb-8">{t('Our Experience')}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-text font-serif mb-6 mt-12 md:mb-8">{t('Our Experience')}</h2>
           <div className="flex flex-col md:flex-row md:h-[calc(100vh-180px)]">
             <Fade bottom duration={1000} delay={200}>
             <div className="w-full md:w-3/5 mb-6 md:mb-0 md:pr-4 h-[50vh] md:h-full">
