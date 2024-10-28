@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent);
 }
 
+.light-text-gold {
+  color: #ffef94;
+}
+
 .bg-gold {
   background-color: var(--color-accent);
 }
