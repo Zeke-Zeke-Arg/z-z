@@ -214,6 +214,10 @@ i18n
     detection: {
       order: ["navigator"],
     },
+  })
+  // ! Remove this line to default to the browser's language if user wants to change language.
+  .then(() => {
+    i18n.changeLanguage("en");
   });
 
 export default i18n;
