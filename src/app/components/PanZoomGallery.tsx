@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-import diningRoom from "@/app/assets/images/E Dinning room 1.jpg";
-import room8 from "@/app/assets/images/E Room 8.jpg";
-import jacuzzi from "@/app/assets/images/jacuzzi.jpg";
+import diningRoom from "@/app/assets/images/zeke-zeke-dinning-room-1.jpg";
+import room8 from "@/app/assets/images/zeke-zeke-room-1.jpg";
+import jacuzzi from "@/app/assets/images/zeke-zeke-jacuzzi-view.jpg";
 import Fade from "react-reveal/Fade";
 
 const PanZoomGallery: React.FC = () => {

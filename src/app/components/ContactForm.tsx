@@ -3,7 +3,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
-import entradaImage from '../assets/images/Entrada.jpg'
+import entradaImage from '../assets/images/zeke-zeke-accommodation-1.jpg'
 import Fade from "react-reveal/Fade";
 
 interface ContactFormProps {
