@@ -5,8 +5,6 @@ import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
 
-import Expandable from "./animata/carousel/expandable";
-import caceria1Image from "@/app/assets/images/zeke-zeke-go-hunting-1.jpg";
 import caceria2Image from "@/app/assets/images/zeke-zeke-go-hunting-2.jpg";
 import caceria3Image from "@/app/assets/images/zeke-zeke-go-hunting-3.jpg";
 import caceria4Image from "@/app/assets/images/zeke-zeke-go-hunting-4.jpg";
@@ -28,13 +26,6 @@ const Gallery: React.FC = () => {
   const { t } = useTranslation();
 
   const [activeCarousel, setActiveCarousel] = useState<string | null>(null);
-
-  const imagesForGallery = [
-    { image: caceria1Image, title: t("Luxury Lodging") },
-    { image: caceria2Image, title: t("Exclusive Hunting Areas") },
-    { image: hunterImage, title: t("Scenic Views") },
-    { image: caceria3Image, title: t("Client Experiences") },
-  ];
 
   const imagesForGrid = [
     {
@@ -84,15 +75,8 @@ const Gallery: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-text font-serif mb-6 mt-12 md:mb-8">
             {t("Our Experience")}
           </h2>
-          <div className="flex flex-col md:flex-row md:h-[calc(100vh-180px)] space-y-6 md:space-y-0 md:space-x-4">
-            <Fade bottom duration={1000} delay={200}>
-              <div className="w-full md:w-3/5 mb-6 md:mb-0 h-[50vh] md:h-full">
-                <Expandable list={imagesForGallery} autoPlay={true} className="w-full h-full" />
-              </div>
-            </Fade>
-
+          <div className="flex flex-col md:h-[calc(100vh-110px)] gap-0 md:gap-4 items-baseline space-y-6 md:space-y-0 md:space-x-4">
             <Fade right duration={1000} delay={200}>
-              <div className="w-full md:w-2/5 flex flex-col space-y-4 h-full">
                 {imagesForGrid.map((item, index) => (
                   <div
                     key={index}
@@ -104,14 +88,13 @@ const Gallery: React.FC = () => {
                       alt=""
                       layout="fill"
                       objectFit="cover"
-                      className="transition duration-300 group-hover:brightness-75"
+                      className="transition duration-300 group-hover:brightness-50"
                     />
                     <p className="absolute bottom-4 left-4 text-xl sm:text-2xl md:text-4xl font-serif shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                       {item.text}
                     </p>
                   </div>
                 ))}
-              </div>
             </Fade>
           </div>
         </div>
