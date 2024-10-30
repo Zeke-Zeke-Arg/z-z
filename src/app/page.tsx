@@ -23,25 +23,6 @@ const Home: React.FC = () => {
     <main className="min-h-screen flex flex-col">
       <Header />
       <Hero />
-      {/* <ProductOverview
-        id="about-us"
-        title={t("About Us")}
-        description={aboutUsDescription1}
-        image={cazadorImage}
-        alt="about us"
-        imageSide="right"
-      />
-      <ProductOverview
-        id="about-us-2"
-        title={" "}
-        description={aboutUsDescription2}
-        enhancedDescription={enhancedDescription}
-        image={foundersImage2}
-        alt="about us"
-        imageSide="left"
-        allowEnhancedDescription
-        divider={false}
-      /> */}
       <AboutUs />
       <Gallery />
       <PanZoomGallery />
