@@ -91,7 +91,7 @@ export const AiOutlineLeft = () => (
       style={{
         fill: "none",
         stroke: "#ffffff",
-        strokeWidth: 2,
+        strokeWidth: 6,
         strokeLinecap: "round",
         strokeMiterlimit: 10,
       }}
@@ -112,7 +112,7 @@ export const AiOutlineRight = () => (
       style={{
         fill: "none",
         stroke: "#ffffff",
-        strokeWidth: 2,
+        strokeWidth: 6,
         strokeLinecap: "round",
         strokeMiterlimit: 10,
       }}
