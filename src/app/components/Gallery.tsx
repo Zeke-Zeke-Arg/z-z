@@ -75,26 +75,29 @@ const Gallery: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-text font-serif mb-6 mt-12 md:mb-8">
             {t("Our Experience")}
           </h2>
-          <div className="flex flex-col md:h-[calc(100vh-110px)] gap-0 md:gap-4 items-baseline space-y-6 md:space-y-0 md:space-x-4">
+          <div className="flex flex-col md:h-[calc(100vh-110px)] gap-0 md:gap-4 items-center space-y-6 md:space-y-0 md:space-x-4">
             <Fade right duration={1000} delay={200}>
-                {imagesForGrid.map((item, index) => (
-                  <div
-                    key={index}
-                    className="relative group w-full h-56 md:h-[33%] overflow-hidden rounded-lg cursor-pointer"
-                    onClick={() => setActiveCarousel(item.carouselId)}
-                  >
-                    <Image
-                      src={item.imageSrc}
-                      alt=""
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition duration-300 group-hover:brightness-50"
-                    />
-                    <p className="absolute bottom-4 left-4 text-xl sm:text-2xl md:text-4xl font-serif shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                      {item.text}
-                    </p>
-                  </div>
-                ))}
+              {imagesForGrid.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative group w-screen h-56 md:h-[33%] overflow-hidden cursor-pointer"
+                  style={{
+                    maxWidth: "2000px",
+                  }}
+                  onClick={() => setActiveCarousel(item.carouselId)}
+                >
+                  <Image
+                    src={item.imageSrc}
+                    alt=""
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition duration-300 group-hover:brightness-50"
+                  />
+                  <p className="absolute bottom-4 left-4 text-xl sm:text-2xl md:text-4xl font-serif shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
             </Fade>
           </div>
         </div>
