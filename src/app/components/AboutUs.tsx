@@ -23,7 +23,7 @@ const AboutUs = () => {
   );
 
   return (
-    <div>
+    <div id="about-us" className="pt-20"> {/* Added padding-top here */}
       <section className="flex flex-col md:flex-row">
         <Fade bottom duration={1000} delay={400}>
           <div className="md:w-1/2 flex flex-col justify-center p-8">
@@ -38,19 +38,19 @@ const AboutUs = () => {
               {enhancedDescription}
             </p>
           </div>
-
+  
           <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
             <Image
               src={cazadorImage}
               alt="About Us"
               layout="fill"
               objectFit="cover"
-              className="rounded-bl-lg rounded-br-none"
+              className="rounded-tl-3xl rounded-bl-3xl rounded-br-none" // Increased rounding for top left and bottom left
             />
           </div>
         </Fade>
       </section>
-
+  
       <section className="flex flex-col md:flex-row mt-10">
         <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
           <Image
@@ -58,10 +58,10 @@ const AboutUs = () => {
             alt="Founders"
             layout="fill"
             objectFit="cover"
-            className="rounded-bl-none rounded-br-lg rounded-tr-lg"
+            className="rounded-tr-3xl rounded-br-3xl rounded-bl-none" // Increased rounding for top right and bottom right
           />
         </div>
-
+  
         <div className="md:w-1/2 flex flex-col justify-center p-8">
           <Fade bottom duration={1000} delay={400}>
             <h2 className="text-4xl font-bold mb-6 text-left">
