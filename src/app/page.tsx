@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import PanZoomGallery from "./components/PanZoomGallery";
 import ContactForm from "./components/ContactForm";
 import AboutUs from "./components/AboutUs";
+import CharterSection from "./components/CharterSection";
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -25,8 +26,9 @@ const Home: React.FC = () => {
       <Hero />
       <AboutUs />
       <Gallery />
+      <CharterSection />
       <PanZoomGallery />
-      <ContactForm id="contact-form" />
+      <ContactForm />
       <Footer />
     </main>
   );
