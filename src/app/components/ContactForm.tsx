@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
-import entradaImage from "../assets/images/zeke-zeke-accommodation-1.jpg";
+import entradaImage from "../assets/images/zeke-zeke-accommodation-1.webp";
 import Fade from "react-reveal/Fade";
 
 const actionURL = "https://formspree.io/f/xpwzpdpg";

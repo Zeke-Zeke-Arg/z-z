@@ -5,20 +5,20 @@ import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
 
-import caceria2Image from "@/app/assets/images/zeke-zeke-go-hunting-2.jpg";
-import caceria3Image from "@/app/assets/images/zeke-zeke-go-hunting-3.jpg";
-import caceria4Image from "@/app/assets/images/zeke-zeke-go-hunting-4.jpg";
-import caceria5Image from "@/app/assets/images/zeke-zeke-go-hunting-5.jpg";
-import hunterImage from "@/app/assets/images/zeke-zeke-hunter-mountains.jpg";
-import livingRoom from "@/app/assets/images/zeke-zeke-livingroom-1.jpg";
-import diningRoom from "@/app/assets/images/zeke-zeke-dinning-room-1.jpg";
-import roomImage2 from "@/app/assets/images/zeke-zeke-room-2.jpg";
-import roomImage3 from "@/app/assets/images/zeke-zeke-room-3.jpg";
-import roomImage4 from "@/app/assets/images/zeke-zeke-room-4.jpg";
-import areas1 from "@/app/assets/images/zeke-zeke-areas-1.png";
-import areas2 from "@/app/assets/images/zeke-zeke-areas-2.png";
-import areas3 from "@/app/assets/images/zeke-zeke-areas-3.png";
-import areas4 from "@/app/assets/images/zeke-zeke-areas-4.jpg";
+import caceria2Image from "@/app/assets/images/zeke-zeke-go-hunting-2.webp";
+import caceria3Image from "@/app/assets/images/zeke-zeke-go-hunting-3.webp";
+import caceria4Image from "@/app/assets/images/zeke-zeke-go-hunting-4.webp";
+import caceria5Image from "@/app/assets/images/zeke-zeke-go-hunting-5.webp";
+import hunterImage from "@/app/assets/images/zeke-zeke-hunter-mountains.webp";
+import livingRoom from "@/app/assets/images/zeke-zeke-livingroom-1.webp";
+import diningRoom from "@/app/assets/images/zeke-zeke-dinning-room-1.webp";
+import roomImage2 from "@/app/assets/images/zeke-zeke-room-2.webp";
+import roomImage3 from "@/app/assets/images/zeke-zeke-room-3.webp";
+import roomImage4 from "@/app/assets/images/zeke-zeke-room-4.webp";
+import areas1 from "@/app/assets/images/zeke-zeke-areas-1.webp";
+import areas2 from "@/app/assets/images/zeke-zeke-areas-2.webp";
+import areas3 from "@/app/assets/images/zeke-zeke-areas-3.webp";
+import areas4 from "@/app/assets/images/zeke-zeke-areas-4.webp";
 
 import ImageCarousel from "./animata/carousel/ImageCarousel";
 
