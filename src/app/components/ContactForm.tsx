@@ -110,7 +110,7 @@ const ContactForm: React.FC = () => {
         className="z-0"
         priority
       />
-      <div className="container mx-auto px-4 relative z-20">
+      <div className="container mx-auto px-4 md:px-8 relative z-20">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <Fade left duration={1000} delay={200}>
             <div className="w-full md:w-2/3 text-center md:text-left">

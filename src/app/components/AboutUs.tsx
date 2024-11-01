@@ -23,10 +23,12 @@ const AboutUs = () => {
   );
 
   return (
-    <div id="about-us" className="pt-20"> {/* Added padding-top here */}
+    <div id="about-us" className="pt-20">
+      {" "}
+      {/* Added padding-top here */}
       <section className="flex flex-col md:flex-row">
         <Fade bottom duration={1000} delay={400}>
-          <div className="md:w-1/2 flex flex-col justify-center p-8">
+          <div className="md:w-1/2 flex flex-col justify-center p-8 px-4 md:px-8">
             <h2 className="text-4xl font-bold mb-6 text-left">
               <span className="text-white-400">{t("The Founders")}</span>
               <hr className="w-20 mt-3 bg-primary h-1" />
@@ -38,7 +40,7 @@ const AboutUs = () => {
               {enhancedDescription}
             </p>
           </div>
-  
+
           <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
             <Image
               src={cazadorImage}
@@ -50,7 +52,6 @@ const AboutUs = () => {
           </div>
         </Fade>
       </section>
-  
       <section className="flex flex-col md:flex-row mt-10">
         <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
           <Image
@@ -61,8 +62,8 @@ const AboutUs = () => {
             className="rounded-tr-3xl rounded-br-3xl rounded-bl-none" // Increased rounding for top right and bottom right
           />
         </div>
-  
-        <div className="md:w-1/2 flex flex-col justify-center p-8">
+
+        <div className="md:w-1/2 flex flex-col justify-center p-8 px-4 md:px-8">
           <Fade bottom duration={1000} delay={400}>
             <h2 className="text-4xl font-bold mb-6 text-left">
               <span className="text-white-400">{t("About Us")}</span>
