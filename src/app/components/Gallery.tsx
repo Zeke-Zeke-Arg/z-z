@@ -26,7 +26,7 @@ const Gallery: React.FC = () => {
   const { t } = useTranslation();
   const galleryRef = useRef<HTMLDivElement>(null);
 
-  const [activeCarousel, setActiveCarousel] = useState<string | null>(null);
+  const [activeCarousel, setActiveCarousel] = useState<CarouselKeys | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [fullScreenImage, setFullScreenImage] = useState<string | null>(null); // New state for full-screen image
 
@@ -52,18 +52,107 @@ const Gallery: React.FC = () => {
 
   const carousels = {
     "hunting-carousel": [
-      { image: caceria3Image },
-      { image: caceria2Image },
-      { image: caceria4Image },
-      { image: caceria3Image },
+      {
+        image: {
+          ...caceria3Image,
+          blurDataURL: caceria3Image.blurDataURL || "",
+          blurWidth: caceria3Image.blurWidth || 0,
+          blurHeight: caceria3Image.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...caceria2Image,
+          blurDataURL: caceria2Image.blurDataURL || "",
+          blurWidth: caceria2Image.blurWidth || 0,
+          blurHeight: caceria2Image.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...caceria4Image,
+          blurDataURL: caceria4Image.blurDataURL || "",
+          blurWidth: caceria4Image.blurWidth || 0,
+          blurHeight: caceria4Image.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...caceria3Image,
+          blurDataURL: caceria3Image.blurDataURL || "",
+          blurWidth: caceria3Image.blurWidth || 0,
+          blurHeight: caceria3Image.blurHeight || 0,
+        },
+      },
     ],
     "accommodation-carousel": [
-      { image: diningRoom },
-      { image: roomImage4 },
-      { image: roomImage3 },
-      { image: roomImage2 },
+      {
+        image: {
+          ...diningRoom,
+          blurDataURL: diningRoom.blurDataURL || "",
+          blurWidth: diningRoom.blurWidth || 0,
+          blurHeight: diningRoom.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...roomImage4,
+          blurDataURL: roomImage4.blurDataURL || "",
+          blurWidth: roomImage4.blurWidth || 0,
+          blurHeight: roomImage4.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...roomImage3,
+          blurDataURL: roomImage3.blurDataURL || "",
+          blurWidth: roomImage3.blurWidth || 0,
+          blurHeight: roomImage3.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...roomImage2,
+          blurDataURL: roomImage2.blurDataURL || "",
+          blurWidth: roomImage2.blurWidth || 0,
+          blurHeight: roomImage2.blurHeight || 0,
+        },
+      },
     ],
-    "areas-carousel": [{ image: areas1 }, { image: areas2 }, { image: areas3 }, { image: areas4 }],
+    "areas-carousel": [
+      {
+        image: {
+          ...areas1,
+          blurDataURL: areas1.blurDataURL || "",
+          blurWidth: areas1.blurWidth || 0,
+          blurHeight: areas1.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...areas2,
+          blurDataURL: areas2.blurDataURL || "",
+          blurWidth: areas2.blurWidth || 0,
+          blurHeight: areas2.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...areas3,
+          blurDataURL: areas3.blurDataURL || "",
+          blurWidth: areas3.blurWidth || 0,
+          blurHeight: areas3.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...areas4,
+          blurDataURL: areas4.blurDataURL || "",
+          blurWidth: areas4.blurWidth || 0,
+          blurHeight: areas4.blurHeight || 0,
+        },
+      },
+    ],
   };
 
   const carouselTitles = {
@@ -120,12 +209,10 @@ const Gallery: React.FC = () => {
                   width={600}
                   height={400}
                   className="object-cover"
-                  onClick={() => handleImageClick(item.imageSrc)} // Handle image click for full-screen view
+                  onClick={() => handleImageClick(item.imageSrc.src)} // Handle image click for full-screen view
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
-                  <p className="text-white text-xl font-serif font-semibold">
-                    {item.text}
-                  </p>
+                  <p className="text-white text-xl font-serif font-semibold">{item.text}</p>
                 </div>
               </div>
             ))}
@@ -135,16 +222,12 @@ const Gallery: React.FC = () => {
 
       <section
         ref={galleryRef}
-        style={{ scrollMarginTop: '80px' }}
+        style={{ scrollMarginTop: "80px" }}
         className="w-full px-0 py-10 pb-0"
       >
         <h2 className="text-4xl font-bold mb-6 text-center w-full">
           <span className="text-white-400">
-            {t(
-              activeCarousel
-                ? carouselTitles[activeCarousel]
-                : "Gallery"
-            )}
+            {t(activeCarousel ? carouselTitles[activeCarousel as CarouselKeys] : "Gallery")}
           </span>
         </h2>
 
@@ -158,10 +241,9 @@ const Gallery: React.FC = () => {
               <ImageCarousel
                 images={
                   activeCarousel
-                    ? carousels[activeCarousel]
+                    ? carousels[activeCarousel as CarouselKeys]
                     : [...Object.values(carousels).flat()]
                 }
-                className="w-full h-[500px]"
               />
             </div>
           )}
@@ -188,7 +270,6 @@ const Gallery: React.FC = () => {
             />
           </Fade>
         </div>
-
       )}
     </div>
   );
