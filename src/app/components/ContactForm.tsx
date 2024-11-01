@@ -6,7 +6,7 @@ import Image from "next/image";
 import entradaImage from "../assets/images/zeke-zeke-accommodation-1.webp";
 import Fade from "react-reveal/Fade";
 
-const actionURL = "https://formspree.io/f/xpwzpdpg";
+import emailjs from "emailjs-com";
 
 const ContactForm: React.FC = () => {
   const { t } = useTranslation();
@@ -58,15 +58,18 @@ const ContactForm: React.FC = () => {
     return isValid;
   };
 
-  const submitForm = async () => {
-    try {
-      const response = await fetch(actionURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  const submitForm = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-      if (response.ok) {
+    if (validateForm()) {
+      try {
+        const result = await emailjs.sendForm(
+          "service_aflfe3i",
+          "template_ld5pz2k",
+          e.target as HTMLFormElement,
+          "j8N6uYq0BnzpgjMFs",
+        );
+        console.log("Email sent successfully:", result.text);
         setFormSubmitted(true);
         setFormData({ clientName: "", clientEmail: "", clientSubject: "", clientMessage: "" });
         setErrors({ clientName: "", clientEmail: "", clientSubject: "", clientMessage: "" });
@@ -74,19 +77,9 @@ const ContactForm: React.FC = () => {
         setTimeout(() => {
           setFormSubmitted(false);
         }, 5000);
-      } else {
-        console.error("Failed to submit form - Error:", response.statusText);
+      } catch (error) {
+        console.error("Failed to submit form - Error:", error);
       }
-    } catch (error) {
-      console.error("Failed to submit form - Error:", error);
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (validateForm()) {
-      submitForm();
     }
   };
 
@@ -140,7 +133,7 @@ const ContactForm: React.FC = () => {
 
           <Fade right duration={1000} delay={200}>
             <form
-              onSubmit={handleSubmit}
+              onSubmit={submitForm}
               className="w-full md:w-1/3 space-y-4 max-w-md mx-auto md:mx-0"
             >
               <input
