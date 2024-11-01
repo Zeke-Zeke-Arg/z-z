@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-import diningRoom from "@/app/assets/images/E Dinning room 1.jpg";
-import room8 from "@/app/assets/images/E Room 8.jpg";
-import jacuzzi from "@/app/assets/images/jacuzzi.jpg";
+import diningRoom from "@/app/assets/images/zeke-zeke-dinning-room-1.webp";
+import room8 from "@/app/assets/images/zeke-zeke-room-1.webp";
+import jacuzzi from "@/app/assets/images/zeke-zeke-jacuzzi-view.webp";
+import Fade from "react-reveal/Fade";
 
 const PanZoomGallery: React.FC = () => {
   const [hoveredTile, setHoveredTile] = useState<number | null>(null);
@@ -57,7 +58,7 @@ const PanZoomGallery: React.FC = () => {
 
   return (
     <section id="lodge" className="relative w-full min-h-screen bg-background overflow-hidden pt-20">
-      <h2 className="text-4xl font-bold text-center mb-8 z-20 text-white text-shadow font-serif">
+      <h2 className="text-4xl font-bold text-center mb-8 z-20 text-white text-shadow font-serif mt-12">
         {t("Our Lodge")}
       </h2>
       <div className="w-full h-full flex flex-col md:flex-row">
@@ -84,10 +85,12 @@ const PanZoomGallery: React.FC = () => {
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
             <div className="absolute z-20 bottom-[10%] left-0 right-0 text-center text-white text-shadow px-4">
+              <Fade bottom duration={1000} delay={200}>
               <div className="text-2xl mb-2">{image.title}</div>
               <div className="text-sm max-w-xs mx-auto">
                 {image.description}
               </div>
+              </Fade>
             </div>
           </div>
         ))}

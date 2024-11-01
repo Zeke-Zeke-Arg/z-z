@@ -1,28 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap");
 
 :root {
   --color-background: #000000;
-  --color-text: #FFFFFF;
-  --color-accent: #FFD700;
+  --color-text: #ffffff;
+  --color-accent: #ffd700;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
 }
 
 .text-gold {
   color: var(--color-accent);
+}
+
+.light-text-gold {
+  color: #ffef94;
 }
 
 .bg-gold {
@@ -47,6 +55,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .shadow-gold {
   box-shadow: 0 0 10px var(--color-accent);
+}
+
+.charter-service {
+  background-image: url("/charter-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 110vh;
+  width: 100%;
 }
 
 /* Add any other global styles here */
