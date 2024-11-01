@@ -136,7 +136,7 @@ const Gallery: React.FC = () => {
       <section
         ref={galleryRef}
         style={{ scrollMarginTop: '80px' }}
-        className="w-full px-0 py-10"
+        className="w-full px-0 py-10 pb-0"
       >
         <h2 className="text-4xl font-bold mb-6 text-center w-full">
           <span className="text-white-400">

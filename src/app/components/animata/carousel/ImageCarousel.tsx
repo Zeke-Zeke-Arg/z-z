@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { AiOutlineLeft, AiOutlineRight } from "@/libs/icons";
+import { AiOutlineLeft, AiOutlineRight, AiOutlineClose } from "@/libs/icons"; // Ensure you have the close icon
 import LoadingSpinner from "./../LoadingSpinner";
 
 interface ImageCarouselProps {
@@ -130,6 +130,17 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
             className="relative w-3/4 h-3/4 transition-transform transform ease-out duration-300"
             style={{ transform: showModal ? "scale(1)" : "scale(0.95)" }}
           >
+            <button
+              onClick={closeModal}
+              className="fixed left-1/2 transform -translate-x-1/2 bg-gray-400 bg-opacity-25 text-white rounded-full p-2 z-50"
+              style={{
+                top: "-65px"
+              }}
+              aria-label="Close modal"
+            >
+              <AiOutlineClose />
+            </button>
+
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <LoadingSpinner size={40} color="text-yellow-500" text="Loading..." />
