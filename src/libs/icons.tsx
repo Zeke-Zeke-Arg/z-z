@@ -120,3 +120,24 @@ export const AiOutlineRight = () => (
     />
   </svg>
 );
+
+export const AiOutlineClose = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 50 50"
+    width="20px"
+    height="20px"
+    className="inline-block mr-2"
+  >
+    <path
+      style={{
+        fill: "none",
+        stroke: "#ffffff",
+        strokeWidth: 6,
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+      }}
+      d="M16,34l18-18M16,16l18,18"
+    />
+  </svg>
+);
