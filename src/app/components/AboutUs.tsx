@@ -30,7 +30,7 @@ const AboutUs = () => {
         <Fade bottom duration={1000} delay={400}>
           <div className="md:w-1/2 flex flex-col justify-center p-8 px-4 md:px-8">
             <h2 className="text-4xl font-bold mb-6 text-left">
-              <span className="text-white-400">{t("The Founders")}</span>
+              <span className="text-white-400">{t("About Us")}</span>
               <hr className="w-20 mt-3 bg-primary h-1" />
             </h2>
             <p className="text-gray-300 text-lg mb-8" style={{ whiteSpace: "pre-wrap" }}>
