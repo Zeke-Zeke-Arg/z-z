@@ -11,15 +11,15 @@ const AboutUs = () => {
   const { t } = useTranslation();
 
   const aboutUsDescription1 = t(
-    `Zeke & Zeke Outfitters is owned by Zeke Leuci and Zeke Crea and was born in 2022, the year when we decided to start our operation by adopting our experience and knowledge acquired during more than 35 years combined operating dove hunting in Argentina, we are taking advantage of all these years where we worked in hunting lodges who were considered the best in the business, and we have developed a new version of doing it. We had only rescued the best of the best to provide an unprecedented experience like no other in the country.`,
+    `Zeke & Zeke Outfitters, owned by Zeke Leuci and Zeke Crea, was born in 2022. The two founders have been involved in organising dove and other game hunting in Argentina for over 35 years between them, having worked with the best hunting lodges in the business. Their extensive knowledge of the natural habitat of game species and their daily patterns of movement enables them to develop a novel approach, tailor-made to the demands and needs of the sporting visitor.  A curated offering for the highest level of accommodation, dining and relaxation after an energetic day in the field, ensures an exclusive experience like no other in the country. Every detail is taken care of to ensure the smooth running of each trip.`,
   );
 
   const aboutUsDescription2 = t(
-    `Zeke Crea has been in the business as a hunting and fishing guide for more than 20 years, offering the best hunts around the country for several hunting lodges, being responsible for many hunters breaking world records of thousands of doves killed in one day and making them always achieved their goals, this is due to extensive knowledge and an excellent relationship with farm owners if you want the best flyways you could get, Zeke is the man you want to be in charge.`,
+    `Zeke Crea has been in the business as a hunting and fishing guide for over 20 years. With a passion for hunting and conservation, he understands what makes a successful hunt for visitors from different parts of the world. He has arranged days of world-record beating numbers of shots per day, achieved through excellent relationships with farm owners in key locations of habitat. An understanding of nesting and feeding patterns of each game as well as the natural topography of terrain enables the setting of the challenge. The team of Zeke & Zeke invites you to dream your ideal day and we will ensure you have the best experience.`,
   );
 
   const enhancedDescription = t(
-    `Together we ensure to provide you with excellence. We invite you to come and have the best experience of your life with us.`,
+    `The team of Zeke & Zeke invites you to dream your ideal day and we will ensure you have the best experience.`,
   );
 
   return (
@@ -36,9 +36,6 @@ const AboutUs = () => {
             <p className="text-gray-300 text-lg mb-8" style={{ whiteSpace: "pre-wrap" }}>
               {aboutUsDescription1}
             </p>
-            <p className="light-text-gold text-xl" style={{ whiteSpace: "pre-wrap" }}>
-              {enhancedDescription}
-            </p>
           </div>
 
           <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
@@ -52,6 +49,7 @@ const AboutUs = () => {
           </div>
         </Fade>
       </section>
+
       <section className="flex flex-col md:flex-row mt-10">
         <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
           <Image
@@ -65,12 +63,11 @@ const AboutUs = () => {
 
         <div className="md:w-1/2 flex flex-col justify-center p-8 px-4 md:px-8">
           <Fade bottom duration={1000} delay={400}>
-            <h2 className="text-4xl font-bold mb-6 text-left">
-              <span className="text-white-400">{t("About Us")}</span>
-              <hr className="w-20 mt-3 bg-primary h-1" />
-            </h2>
             <p className="text-gray-300 text-lg mb-8" style={{ whiteSpace: "pre-wrap" }}>
               {aboutUsDescription2}
+            </p>
+            <p className="text-gray-300 text-lg mb-8" style={{ whiteSpace: "pre-wrap" }}>
+              {enhancedDescription}
             </p>
           </Fade>
         </div>
