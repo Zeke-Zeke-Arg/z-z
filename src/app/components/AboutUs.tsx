@@ -15,7 +15,7 @@ const AboutUs = () => {
   );
 
   const aboutUsDescription2 = t(
-    `Zeke Crea has been in the business as a hunting and fishing guide for over 20 years. With a passion for hunting and conservation, he understands what makes a successful hunt for visitors from different parts of the world. He has arranged days of world-record beating numbers of shots per day, achieved through excellent relationships with farm owners in key locations of habitat. An understanding of nesting and feeding patterns of each game as well as the natural topography of terrain enables the setting of the challenge. The team of Zeke & Zeke invites you to dream your ideal day and we will ensure you have the best experience.`,
+    `Zeke Crea has been in the business as a hunting and fishing guide for over 20 years. With a passion for hunting and conservation, he understands what makes a successful hunt for visitors from different parts of the world. He has arranged days of world-record beating numbers of shots per day, achieved through excellent relationships with farm owners in key locations of habitat. An understanding of nesting and feeding patterns of each game as well as the natural topography of terrain enables the setting of the challenge.`,
   );
 
   const enhancedDescription = t(
