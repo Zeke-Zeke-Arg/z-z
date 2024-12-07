@@ -4,34 +4,26 @@ import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
-
-// Import new images for hunting carousel
-import hunting1 from "@/app/assets/images/pigeon_hunting_compressed/A1-2.webp";
-import hunting2 from "@/app/assets/images/pigeon_hunting_compressed/B-12.webp";
-import hunting3 from "@/app/assets/images/pigeon_hunting_compressed/B-13.webp";
-import hunting4 from "@/app/assets/images/pigeon_hunting_compressed/B-40.webp";
-import hunting5 from "@/app/assets/images/pigeon_hunting_compressed/D-65.webp";
-import hunting6 from "@/app/assets/images/pigeon_hunting_compressed/D-66.webp";
-import hunting7 from "@/app/assets/images/pigeon_hunting_compressed/D-70.webp";
-import hunting8 from "@/app/assets/images/pigeon_hunting_compressed/D-73.webp";
+import ImageCarousel from "./animata/carousel/ImageCarousel";
 
 // Import new images for accommodation carousel
-import accom1 from "@/app/assets/images/luxury_acommodation_compressed/B-4.webp";
-import accom2 from "@/app/assets/images/luxury_acommodation_compressed/B-9.webp";
-import accom3 from "@/app/assets/images/luxury_acommodation_compressed/B-11.webp";
-import accom4 from "@/app/assets/images/luxury_acommodation_compressed/D-9.webp";
-import accom5 from "@/app/assets/images/luxury_acommodation_compressed/D-11.webp";
-import accom6 from "@/app/assets/images/luxury_acommodation_compressed/D-12.webp";
-import accom7 from "@/app/assets/images/luxury_acommodation_compressed/D-15.webp";
-import accom8 from "@/app/assets/images/luxury_acommodation_compressed/D-17.webp";
-import accom9 from "@/app/assets/images/luxury_acommodation_compressed/D-18.webp";
-import accom10 from "@/app/assets/images/luxury_acommodation_compressed/D-24.webp";
-import accom11 from "@/app/assets/images/luxury_acommodation_compressed/D-30.webp";
-import accom12 from "@/app/assets/images/luxury_acommodation_compressed/D-45.webp";
-import accom13 from "@/app/assets/images/luxury_acommodation_compressed/D-46.webp";
-import accom14 from "@/app/assets/images/luxury_acommodation_compressed/D-47.webp";
-import accom15 from "@/app/assets/images/luxury_acommodation_compressed/D-62.webp";
-import accom16 from "@/app/assets/images/luxury_acommodation_compressed/D-63.webp";
+import accom1 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-100.webp";
+import accom2 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-101.jpg";
+import accom3 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-102.jpg";
+import accom4 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-103.webp";
+import accom5 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-104.webp";
+import accom6 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-105.webp";
+import accom7 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-106.jpg";
+import accom8 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-107.webp";
+import accom9 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-201.webp";
+import accom10 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-202.webp";
+import accom11 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-203.webp";
+import accom12 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-301.jpg";
+import accom13 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-302.webp";
+import accom14 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-303.jpg";
+import accom15 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-304.jpg";
+import accom16 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-305.webp";
+import accom17 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-306.webp";
 
 // Import new images for areas carousel
 import area1 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-19.webp";
@@ -45,7 +37,17 @@ import area8 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-35.w
 import area9 from "@/app/assets/images/Exclusive_hunting_areas_compressed/D-42.webp";
 import area10 from "@/app/assets/images/Exclusive_hunting_areas_compressed/D-52.webp";
 import area11 from "@/app/assets/images/Exclusive_hunting_areas_compressed/D-78.webp";
-import ImageCarousel from "./animata/carousel/ImageCarousel";
+
+// Import new images for hunting carousel
+import hunting1 from "@/app/assets/images/pigeon_hunting_compressed/A1-2.webp";
+import hunting2 from "@/app/assets/images/pigeon_hunting_compressed/B-12.webp";
+import hunting3 from "@/app/assets/images/pigeon_hunting_compressed/B-13.webp";
+import hunting4 from "@/app/assets/images/pigeon_hunting_compressed/B-40.webp";
+import hunting5 from "@/app/assets/images/pigeon_hunting_compressed/D-65.webp";
+import hunting6 from "@/app/assets/images/pigeon_hunting_compressed/D-66.webp";
+import hunting7 from "@/app/assets/images/pigeon_hunting_compressed/D-70.webp";
+import hunting8 from "@/app/assets/images/pigeon_hunting_compressed/D-73.webp";
+
 
 const Gallery: React.FC = () => {
   const { t } = useTranslation();
@@ -57,11 +59,6 @@ const Gallery: React.FC = () => {
 
   const imagesForGrid = [
     {
-      imageSrc: hunting1,
-      text: "Shooting",
-      carouselId: "hunting-carousel",
-    },
-    {
       imageSrc: accom1,
       text: "Luxury Accommodation",
       carouselId: "accommodation-carousel",
@@ -71,77 +68,16 @@ const Gallery: React.FC = () => {
       text: "Exclusive Hunting Areas",
       carouselId: "areas-carousel",
     },
+    {
+      imageSrc: hunting1,
+      text: "Shooting",
+      carouselId: "hunting-carousel",
+    },
   ];
 
   type CarouselKeys = "hunting-carousel" | "accommodation-carousel" | "areas-carousel";
 
   const carousels = {
-    "hunting-carousel": [
-      {
-        image: {
-          ...hunting1,
-          blurDataURL: hunting1.blurDataURL || "",
-          blurWidth: hunting1.blurWidth || 0,
-          blurHeight: hunting1.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting2,
-          blurDataURL: hunting2.blurDataURL || "",
-          blurWidth: hunting2.blurWidth || 0,
-          blurHeight: hunting2.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting3,
-          blurDataURL: hunting3.blurDataURL || "",
-          blurWidth: hunting3.blurWidth || 0,
-          blurHeight: hunting3.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting4,
-          blurDataURL: hunting4.blurDataURL || "",
-          blurWidth: hunting4.blurWidth || 0,
-          blurHeight: hunting4.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting5,
-          blurDataURL: hunting5.blurDataURL || "",
-          blurWidth: hunting5.blurWidth || 0,
-          blurHeight: hunting5.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting6,
-          blurDataURL: hunting6.blurDataURL || "",
-          blurWidth: hunting6.blurWidth || 0,
-          blurHeight: hunting6.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting7,
-          blurDataURL: hunting7.blurDataURL || "",
-          blurWidth: hunting7.blurWidth || 0,
-          blurHeight: hunting7.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting8,
-          blurDataURL: hunting8.blurDataURL || "",
-          blurWidth: hunting8.blurWidth || 0,
-          blurHeight: hunting8.blurHeight || 0,
-        },
-      },
-    ],
     "accommodation-carousel": [
       {
         image: {
@@ -271,6 +207,14 @@ const Gallery: React.FC = () => {
           blurHeight: accom16.blurHeight || 0,
         },
       },
+      {
+        image: {
+          ...accom17,
+          blurDataURL: accom16.blurDataURL || "",
+          blurWidth: accom16.blurWidth || 0,
+          blurHeight: accom16.blurHeight || 0,
+        },
+      },
     ],
     "areas-carousel": [
       {
@@ -359,6 +303,72 @@ const Gallery: React.FC = () => {
           blurDataURL: area11.blurDataURL || "",
           blurWidth: area11.blurWidth || 0,
           blurHeight: area11.blurHeight || 0,
+        },
+      },
+    ],
+    "hunting-carousel": [
+      {
+        image: {
+          ...hunting1,
+          blurDataURL: hunting1.blurDataURL || "",
+          blurWidth: hunting1.blurWidth || 0,
+          blurHeight: hunting1.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...hunting2,
+          blurDataURL: hunting2.blurDataURL || "",
+          blurWidth: hunting2.blurWidth || 0,
+          blurHeight: hunting2.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...hunting3,
+          blurDataURL: hunting3.blurDataURL || "",
+          blurWidth: hunting3.blurWidth || 0,
+          blurHeight: hunting3.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...hunting4,
+          blurDataURL: hunting4.blurDataURL || "",
+          blurWidth: hunting4.blurWidth || 0,
+          blurHeight: hunting4.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...hunting5,
+          blurDataURL: hunting5.blurDataURL || "",
+          blurWidth: hunting5.blurWidth || 0,
+          blurHeight: hunting5.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...hunting6,
+          blurDataURL: hunting6.blurDataURL || "",
+          blurWidth: hunting6.blurWidth || 0,
+          blurHeight: hunting6.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...hunting7,
+          blurDataURL: hunting7.blurDataURL || "",
+          blurWidth: hunting7.blurWidth || 0,
+          blurHeight: hunting7.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...hunting8,
+          blurDataURL: hunting8.blurDataURL || "",
+          blurWidth: hunting8.blurWidth || 0,
+          blurHeight: hunting8.blurHeight || 0,
         },
       },
     ],
