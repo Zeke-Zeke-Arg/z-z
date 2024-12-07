@@ -25,9 +25,9 @@ const Home: React.FC = () => {
       <Header />
       <Hero />
       <AboutUs />
+      <PanZoomGallery />
       <Gallery />
       <CharterSection />
-      <PanZoomGallery />
       <ContactForm />
       <Footer />
     </main>

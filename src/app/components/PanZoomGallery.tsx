@@ -15,18 +15,18 @@ const PanZoomGallery: React.FC = () => {
 
   const lodge = [
     {
-      title: t("Our Accommodations"),
+      title: t("Accommodations"),
       description: t("Escape to our accommodations, designed for relaxation and unforgettable moments. Unwind, create memories, and enjoy a peaceful atmosphere, far from daily stress."),
       image: diningRoom,
-      alt: t("Our Accommodations"),
+      alt: t("Accommodations"),
     },
     {
-      title: t("Our Rooms"),
+      title: t("Rooms"),
       description: t(
         "Relax in comfort at our lodge with six double rooms, each with en-suite bathrooms and air conditioning. Enjoy stunning mountain views, sunsets, and unwind by the fire pit or heated outdoor pool. Perfect for private hunting retreats, accommodating up to 12 guests."
       ),
       image: room8,
-      alt: t("Our Rooms"),
+      alt: t("Rooms"),
     },
     {
       title: t("Relaxation"),
@@ -59,7 +59,7 @@ const PanZoomGallery: React.FC = () => {
   return (
     <section id="lodge" className="relative w-full min-h-screen bg-background overflow-hidden pt-20">
       <h2 className="text-4xl font-bold text-center mb-8 z-20 text-white text-shadow font-serif mt-12">
-        {t("Our Lodge")}
+        {t("The Lodge")}
       </h2>
       <div className="w-full h-full flex flex-col md:flex-row">
         {images.map((image, index) => (

@@ -58,7 +58,7 @@ const Gallery: React.FC = () => {
   const imagesForGrid = [
     {
       imageSrc: hunting1,
-      text: "Pigeon Hunting",
+      text: "Shooting",
       carouselId: "hunting-carousel",
     },
     {
@@ -365,7 +365,7 @@ const Gallery: React.FC = () => {
   };
 
   const carouselTitles = {
-    "hunting-carousel": "Pigeon Hunting",
+    "hunting-carousel": "Shooting",
     "accommodation-carousel": "Luxury Accommodation",
     "areas-carousel": "Exclusive Hunting Areas",
   };

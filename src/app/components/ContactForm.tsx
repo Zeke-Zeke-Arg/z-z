@@ -107,26 +107,42 @@ const ContactForm: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <Fade left duration={1000} delay={200}>
             <div className="w-full md:w-2/3 text-center md:text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-4">
-                {t("Let's Talk")}
-              </h1>
+
               <div className="text-base sm:text-lg md:text-xl mb-8 md:mb-12 max-w-2xl mx-auto md:mx-0">
-                <h2 className="font-bold mb-2">{t("High Volume Dove Hunting Package:")}</h2>
-                <ul className="list-disc list-inside mb-4 text-left">
-                  <li>{t("All-inclusive experience with meals, drinks, and lodging")}</li>
-                  <li>{t("Professional guides and full-time coordinator")}</li>
-                  <li>{t("Airport transfers and ground transportation")}</li>
-                  <li>{t("Optional add-ons: shells, gun rental, hunting license")}</li>
+
+                <h1 className="font-bold mb-2">{t("HIGH VOLUME DOVE HUNTING")}</h1>
+                <h2 className="font-bold mb-2">{t("Regular rate:")}</h2>
+                <ul className="list-disc list-inside mb-4 text-left ">
+                  <li>{t("Per hunter per night $549")}</li>
+                  <li>{t("With +8 hunters you can request")}</li>
+                  <li>{t("private lodging")}</li>
                 </ul>
-                <h2 className="font-bold mb-2">
-                  {t("Dove and Pigeon Deluxe Package (4 Nights/5 Days):")}
-                </h2>
-                <ul className="list-disc list-inside text-left">
-                  <li>{t("4-night stay in deluxe lodge, 6 hunting sessions")}</li>
-                  <li>{t("All-inclusive with meals, drinks, and transportation")}</li>
-                  <li>{t("Gun rental, hunting license, and 1000-2000 shells included")}</li>
-                  <li>{t("Optional add-ons for non-hunters and extra amenities")}</li>
+
+                <h2 className="font-bold mb-2">{t("WHAT’S INCLUDED")}</h2>
+                <ul className="list-disc list-inside mb-4 text-left text-sm">
+                  <li>{t("Meet and assistance on arrival and departure at Cordoba International Airport.")}</li>
+                  <li>{t("Full time coordinator from the moment you book your trip.")}</li>
+                  <li>{t("All ground transportation from/to Cordoba airport and hunting fields.")}</li>
+                  <li>{t("All Wonderful gourmet meals, breakfast, lunch, snacks and dinner.")}</li>
+                  <li>{t("All beverages, including real good quality Argentinean wine, local beers, and local hard liquor.")}</li>
+                  <li>{t("All local taxes and service charges. All field leases.")}</li>
+                  <li>{t("Professional hunting guides and personal assistants.")}</li>
+                  <li>{t("Gun cleaning service.")}</li>
+                  <li>{t("Free WiFi.")}</li>
                 </ul>
+                
+                <h2 className="font-bold mb-2">{t("NOT INCLUDED")}</h2>
+                <ul className="list-disc list-inside mb-4 text-left text-sm">
+                  <li>{t("Airfare.")}</li>
+                  <li>{t("Shells ($19.95 per box of 25).")}</li>
+                  <li>{t("Gun rental ($85 per day).")}</li>
+                  <li>{t("Hunting License ($65 per day).")}</li>
+                  <li>{t("Gratuities to house staff and bird boys.")}</li>
+                  <li>{t("Single room ($60 per night).")}</li>
+                  <li>{t("Pigeon Hunt ($250, 200 pigeons limit per day).")}</li>
+                  <li>{t("Non hunter $350 per day.")}</li>
+                </ul>
+
               </div>
             </div>
           </Fade>
