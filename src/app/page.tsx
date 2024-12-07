@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import HeroLodge from "./components/HeroLodge";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import PanZoomGallery from "./components/PanZoomGallery";
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
       <Header />
       <Hero />
       <AboutUs />
+      <HeroLodge />
       <PanZoomGallery />
       <Gallery />
       <CharterSection />

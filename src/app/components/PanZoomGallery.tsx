@@ -57,10 +57,12 @@ const PanZoomGallery: React.FC = () => {
   };
 
   return (
-    <section id="lodge" className="relative w-full min-h-screen bg-background overflow-hidden pt-20">
+    <section id="lodgeDesciption" className="relative w-full min-h-screen bg-background overflow-hidden">
+      {/*
       <h2 className="text-4xl font-bold text-center mb-8 z-20 text-white text-shadow font-serif mt-12">
         {t("The Lodge")}
       </h2>
+      */}
       <div className="w-full h-full flex flex-col md:flex-row">
         {images.map((image, index) => (
           <div
@@ -86,7 +88,9 @@ const PanZoomGallery: React.FC = () => {
             <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
             <div className="absolute z-20 bottom-[10%] left-0 right-0 text-center text-white text-shadow px-4">
               <Fade bottom duration={1000} delay={200}>
-              <div className="text-2xl mb-2">{image.title}</div>
+              <div className="text-2xl mb-2">
+                {image.title}
+                </div>
               <div className="text-sm max-w-xs mx-auto">
                 {image.description}
               </div>
