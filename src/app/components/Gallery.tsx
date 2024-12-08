@@ -25,28 +25,28 @@ import accom15 from "@/app/assets/images/luxury_acommodation_compressed/accommod
 import accom16 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-305.webp";
 import accom17 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-306.webp";
 
-// Import new images for areas carousel
-import area1 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-19.webp";
-import area2 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-24.webp";
-import area3 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-26.webp";
-import area4 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-27.webp";
-import area5 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-29.webp";
-import area6 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-30.webp";
-import area7 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-34.webp";
-import area8 from "@/app/assets/images/Exclusive_hunting_areas_compressed/B-35.webp";
-import area9 from "@/app/assets/images/Exclusive_hunting_areas_compressed/D-42.webp";
-import area10 from "@/app/assets/images/Exclusive_hunting_areas_compressed/D-52.webp";
-import area11 from "@/app/assets/images/Exclusive_hunting_areas_compressed/D-78.webp";
+// Import new images for service carousel
+import area1 from "@/app/assets/images/Service/Service-1001.webp";
+import area2 from "@/app/assets/images/Service/Service-1002.webp";
+import area3 from "@/app/assets/images/Service/Service-1003.jpg";
+import area4 from "@/app/assets/images/Service/Service-1004.webp";
+import area5 from "@/app/assets/images/Service/Service-1005.webp";
+import area6 from "@/app/assets/images/Service/Service-1006.webp";
+import area7 from "@/app/assets/images/Service/Service-1007.webp";
+import area8 from "@/app/assets/images/Service/Service-1008.jpg";
+import area9 from "@/app/assets/images/Service/Service-1009.avif";
+import area10 from "@/app/assets/images/Service/Service-1010.avif";
+import area11 from "@/app/assets/images/Service/Service-1011.webp";
 
-// Import new images for hunting carousel
-import hunting1 from "@/app/assets/images/pigeon_hunting_compressed/A1-2.webp";
-import hunting2 from "@/app/assets/images/pigeon_hunting_compressed/B-12.webp";
-import hunting3 from "@/app/assets/images/pigeon_hunting_compressed/B-13.webp";
-import hunting4 from "@/app/assets/images/pigeon_hunting_compressed/B-40.webp";
-import hunting5 from "@/app/assets/images/pigeon_hunting_compressed/D-65.webp";
-import hunting6 from "@/app/assets/images/pigeon_hunting_compressed/D-66.webp";
-import hunting7 from "@/app/assets/images/pigeon_hunting_compressed/D-70.webp";
-import hunting8 from "@/app/assets/images/pigeon_hunting_compressed/D-73.webp";
+// Import new images for shooting carousel
+import hunting1 from "@/app/assets/images/Shooting/Shooting-1001.webp";
+import hunting2 from "@/app/assets/images/Shooting/Shooting-1002.jpg";
+import hunting3 from "@/app/assets/images/Shooting/Shooting-1003.webp";
+import hunting4 from "@/app/assets/images/Shooting/Shooting-1004.webp";
+import hunting5 from "@/app/assets/images/Shooting/Shooting-1005.webp";
+import hunting6 from "@/app/assets/images/Shooting/Shooting-1006.jpg";
+import hunting7 from "@/app/assets/images/Shooting/Shooting-1007.jpg";
+import hunting8 from "@/app/assets/images/Shooting/Shooting-1008.webp";
 
 
 const Gallery: React.FC = () => {
@@ -64,12 +64,12 @@ const Gallery: React.FC = () => {
       carouselId: "accommodation-carousel",
     },
     {
-      imageSrc: area1,
-      text: "Exclusive Hunting Areas",
+      imageSrc: area11,
+      text: "Service",
       carouselId: "areas-carousel",
     },
     {
-      imageSrc: hunting1,
+      imageSrc: hunting3,
       text: "Shooting",
       carouselId: "hunting-carousel",
     },
@@ -375,9 +375,9 @@ const Gallery: React.FC = () => {
   };
 
   const carouselTitles = {
-    "hunting-carousel": "Shooting",
     "accommodation-carousel": "Luxury Accommodation",
-    "areas-carousel": "Exclusive Hunting Areas",
+    "areas-carousel": "Service",
+    "hunting-carousel": "Shooting",
   };
 
   const handleCardClick = (carouselId: CarouselKeys) => {
