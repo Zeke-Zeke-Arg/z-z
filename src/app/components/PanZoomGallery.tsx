@@ -57,7 +57,7 @@ const PanZoomGallery: React.FC = () => {
   };
 
   return (
-    <section id="lodgeDesciption" className="relative w-full min-h-screen bg-background overflow-hidden">
+    <section id="lodgeDesciption" className="relative w-full bg-background overflow-hidden">
       {/*
       <h2 className="text-4xl font-bold text-center mb-8 z-20 text-white text-shadow font-serif mt-12">
         {t("The Lodge")}
