@@ -44,7 +44,7 @@ import hunting1 from "@/app/assets/images/Shooting/Shooting-1001.webp";
 import hunting3 from "@/app/assets/images/Shooting/Shooting-1003.webp";
 import hunting4 from "@/app/assets/images/Shooting/Shooting-1004.webp";
 import hunting5 from "@/app/assets/images/Shooting/Shooting-1005.webp";
-import hunting6 from "@/app/assets/images/Shooting/Shooting-1006.jpg";
+//import hunting6 from "@/app/assets/images/Shooting/Shooting-1006.jpg";
 import hunting7 from "@/app/assets/images/Shooting/Shooting-1007.jpg";
 import hunting8 from "@/app/assets/images/Shooting/Shooting-1008.webp";
 
@@ -305,14 +305,6 @@ const Gallery: React.FC = () => {
           blurDataURL: hunting5.blurDataURL || "",
           blurWidth: hunting5.blurWidth || 0,
           blurHeight: hunting5.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...hunting6,
-          blurDataURL: hunting6.blurDataURL || "",
-          blurWidth: hunting6.blurWidth || 0,
-          blurHeight: hunting6.blurHeight || 0,
         },
       },
       {
