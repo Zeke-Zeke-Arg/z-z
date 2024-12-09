@@ -34,8 +34,8 @@ import area5 from "@/app/assets/images/Service/Service-1005.webp";
 import area6 from "@/app/assets/images/Service/Service-1006.webp";
 import area7 from "@/app/assets/images/Service/Service-1007.webp";
 import area8 from "@/app/assets/images/Service/Service-1008.jpg";
-//import area9 from "@/app/assets/images/Service/Service-1009.avif";
-//import area10 from "@/app/assets/images/Service/Service-1010.avif";
+import area9 from "@/app/assets/images/Service/Service-1009.avif";
+import area10 from "@/app/assets/images/Service/Service-1010.avif";
 import area11 from "@/app/assets/images/Service/Service-1011.webp";
 
 // Import new images for shooting carousel
@@ -276,6 +276,22 @@ const Gallery: React.FC = () => {
       {
         image: {
           ...area8,
+          blurDataURL: area8.blurDataURL || "",
+          blurWidth: area8.blurWidth || 0,
+          blurHeight: area8.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...area9,
+          blurDataURL: area8.blurDataURL || "",
+          blurWidth: area8.blurWidth || 0,
+          blurHeight: area8.blurHeight || 0,
+        },
+      },
+      {
+        image: {
+          ...area10,
           blurDataURL: area8.blurDataURL || "",
           blurWidth: area8.blurWidth || 0,
           blurHeight: area8.blurHeight || 0,
