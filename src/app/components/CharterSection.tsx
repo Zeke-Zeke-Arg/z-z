@@ -2,7 +2,7 @@ import React from "react";
 
 const CharterSection = () => {
   return (
-    <section className="charter-service relative">
+    <section className="charter-service relative mt-30">
       <div className="relative min-h-screen flex items-center justify-end text-white py-12 sm:py-16">
         <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
 
