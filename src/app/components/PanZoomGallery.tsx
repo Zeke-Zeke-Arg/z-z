@@ -16,23 +16,23 @@ const PanZoomGallery: React.FC = () => {
   const lodge = [
     {
       title: t("Accommodations"),
-      description: t("Escape to our accommodations, designed for relaxation and unforgettable moments. Unwind, create memories, and enjoy a peaceful atmosphere, far from daily stress."),
+      description: t("Relax in our lodge, designed for tranquility and unforgettable moments. Unwind by the fire pit or heated outdoor jacuzzi, create memories, and enjoy a peaceful atmosphere, far from daily stress in everyday life."),
       image: diningRoom,
       alt: t("Accommodations"),
     },
     {
       title: t("Rooms"),
       description: t(
-        "Relax in comfort at our lodge with six double rooms, each with en-suite bathrooms and air conditioning. Enjoy stunning mountain views, sunsets, and unwind by the fire pit or heated outdoor pool. Perfect for private hunting retreats, accommodating up to 12 guests."
+        "Our lodge offers eight double rooms, each with en-suite bathroom and air conditioning. For private hunting retreats, we can accommodate up to 16 guests."
       ),
       image: room8,
       alt: t("Rooms"),
     },
     {
-      title: t("Relaxation"),
+      title: t("Leisure"),
       description: t("After a long day, unwind and recharge in complete comfort. Our relaxation services are available daily, providing the perfect way to ease into the evening and enhance your stay."),
       image: jacuzzi,
-      alt: t("Relaxation"),
+      alt: t("Leisure"),
     },
   ];
   const images = lodge;

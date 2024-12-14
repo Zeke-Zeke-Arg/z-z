@@ -11,13 +11,13 @@ const CharterSection = () => {
             <h2 className="text-5xl font-bold mb-12">Charter</h2>
 
             <p className="text-lg mb-4">
-              We are excited to introduce you to Feeling Air. Fly directly from Ezeiza to the lodge, 
-              avoiding the hassle of airport layovers. With a Cessna Turbo Stationair and a Cessna Grand Caravan EX, 
-              we fly you to your destination in style and comfort.
+            We are pleased to introduce you to Feeling Air, our partner that offers private flights directly from Buenos 
+            Aires to Cordoba. With a Cessna Turbo Stationair and a Cessna Grand Caravan EX, we fly you to your 
+            destination in style and comfort.
             </p>
             <p className="text-lg">
-              In addition to flights to and from the lodge, our continued partnership with other small jet companies 
-              allows us to assist you with all your charter travel needs.
+            In addition to flights to and from the lodge, our continued partnership with other small jet companies 
+            allows us to assist you with all your charter travel needs.
             </p>
           </div>
         </div>

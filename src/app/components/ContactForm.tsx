@@ -114,8 +114,7 @@ const ContactForm: React.FC = () => {
                 <h2 className="font-bold mb-2">{t("Regular rate:")}</h2>
                 <ul className="list-disc list-inside mb-4 text-left ">
                   <li>{t("Per hunter per night $549")}</li>
-                  <li>{t("With +8 hunters you can request")}</li>
-                  <li>{t("private lodging")}</li>
+                  <li>{t("With +8 hunters you can request private lodging")}</li>
                 </ul>
 
                 <h2 className="font-bold mb-2">{t("WHAT’S INCLUDED")}</h2>
@@ -123,8 +122,8 @@ const ContactForm: React.FC = () => {
                   <li>{t("Meet and assistance on arrival and departure at Cordoba International Airport.")}</li>
                   <li>{t("Full time coordinator from the moment you book your trip.")}</li>
                   <li>{t("All ground transportation from/to Cordoba airport and hunting fields.")}</li>
-                  <li>{t("All Wonderful gourmet meals, breakfast, lunch, snacks and dinner.")}</li>
-                  <li>{t("All beverages, including real good quality Argentinean wine, local beers, and local hard liquor.")}</li>
+                  <li>{t("All Wonderful gourmet meals: breakfast, lunch, snacks and dinner.")}</li>
+                  <li>{t("All beverages, including high quality Argentinean wine, local beers, and cocktails.")}</li>
                   <li>{t("All local taxes and service charges. All field leases.")}</li>
                   <li>{t("Professional hunting guides and personal assistants.")}</li>
                   <li>{t("Gun cleaning service.")}</li>
@@ -133,7 +132,7 @@ const ContactForm: React.FC = () => {
                 
                 <h2 className="font-bold mb-2">{t("NOT INCLUDED")}</h2>
                 <ul className="list-disc list-inside mb-4 text-left text-sm">
-                  <li>{t("Airfare.")}</li>
+                  <li>{t("Airfare/Charter Flight options.")}</li>
                   <li>{t("Shells ($19.95 per box of 25).")}</li>
                   <li>{t("Gun rental ($85 per day).")}</li>
                   <li>{t("Hunting License ($65 per day).")}</li>

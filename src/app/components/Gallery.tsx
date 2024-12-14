@@ -65,7 +65,7 @@ const Gallery: React.FC = () => {
     },
     {
       imageSrc: area11,
-      text: "Quality Services",
+      text: "Top-quality Services",
       carouselId: "areas-carousel",
     },
     {
@@ -376,7 +376,7 @@ const Gallery: React.FC = () => {
 
   const carouselTitles = {
     "accommodation-carousel": "Luxury Accommodation",
-    "areas-carousel": "Service",
+    "areas-carousel": "Top-quality Service",
     "hunting-carousel": "Shooting",
   };
 
