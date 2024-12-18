@@ -45,21 +45,18 @@ const Hero: React.FC = () => {
         <div className="container mx-auto flex items-center justify-center md:justify-start md:mx-10 z-10">
           <div className="z-10 relative px-4 py-12 sm:py-16 sm:w-1/2 max-w-[550px] md:mr-14">
 
-            <h2 className="text-5xl font-bold mb-12">Dove Hunting</h2>
+            <h2 className="text-5xl font-bold mb-12">
+              {t('Dove Hunting')}
+            </h2>
 
-            <p className="text-lg mb-4">
-              Located at the western side of Cordoba province in the largest irrigated area of Argentina, the peanut, 
-              sunflower and sorghum fields in the area together with many acres of roost make this area an incredible 
-              habitat for doves and pigeons.
-            </p>
-
-            <p className="text-lg">
-              Everyone who visits Córdoba is amazed by the number of doves they see and the size of the flocks for high 
-              volume dove hunting, the concentration can vary throughout the year, Zeke & Zeke makes sure you hunt as 
-              many birds you want, this is due to our non-stop scouting, great knowledge and the experience gained over 
-              the years.
-            </p>
-
+            <div className="text-lg mx-auto mb-4">
+              {t("Located at the western side of Cordoba province in the largest irrigated area of Argentina, the peanut,sunflower and sorghum fields in the area together with many acres of roost make this area an incredible habitat for doves and pigeons.")}
+            </div>
+            
+            <div className="text-lg mx-automb-4">
+              {t("Everyone who visits Córdoba is amazed by the number of doves they see and the size of the flocks for high volume dove hunting, the concentration can vary throughout the year, Zeke & Zeke makes sure you hunt as many birds you want, this is due to our non-stop scouting, great knowledge and the experience gained over the years.")}
+            </div>
+            
           </div>
         </div>
 
