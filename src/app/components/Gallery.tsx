@@ -8,7 +8,7 @@ import ImageCarousel from "./animata/carousel/ImageCarousel";
 
 // Import new images for accommodation carousel
 import accom1 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-100.webp";
-import accom2 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-101.jpg";
+// import accom2 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-101.jpg";
 import accom3 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-102.jpg";
 import accom4 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-103.webp";
 import accom5 from "@/app/assets/images/luxury_acommodation_compressed/accommodation-104.webp";
@@ -59,7 +59,7 @@ const Gallery: React.FC = () => {
 
   const imagesForGrid = [
     {
-      imageSrc: accom1,
+      imageSrc: accom5,
       text: "Luxury Accommodation",
       carouselId: "accommodation-carousel",
     },
@@ -85,14 +85,6 @@ const Gallery: React.FC = () => {
           blurDataURL: accom1.blurDataURL || "",
           blurWidth: accom1.blurWidth || 0,
           blurHeight: accom1.blurHeight || 0,
-        },
-      },
-      {
-        image: {
-          ...accom2,
-          blurDataURL: accom2.blurDataURL || "",
-          blurWidth: accom2.blurWidth || 0,
-          blurHeight: accom2.blurHeight || 0,
         },
       },
       {
@@ -409,12 +401,13 @@ const Gallery: React.FC = () => {
     <div id="our-services" className="overflow-hidden bg-background">
       <section className="min-h-screen w-full flex items-center py-10">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-text font-serif mb-6 mt-12 md:mb-8">
+
+          <h2 className="text-3xl md:text-4xl font-bold text-center align-top text-text font-serif mb-12 mt-6 md:mb-8">
             {t("Our Experience")}
           </h2>
 
           {/* Service Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 pt-12">
             {imagesForGrid.map((item, index) => (
               <div
                 key={index}
@@ -430,8 +423,8 @@ const Gallery: React.FC = () => {
                   className="object-cover"
                   onClick={() => handleImageClick(item.imageSrc.src)}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
-                  <p className="text-white text-xl font-serif font-semibold">{item.text}</p>
+                <div className="absolute inset-0 flex items-end p-4">
+                  <p className="text-white text-2xl text-shadow font-serif font-semibold">{item.text}</p>
                 </div>
               </div>
             ))}
@@ -442,7 +435,7 @@ const Gallery: React.FC = () => {
       <section
         ref={galleryRef}
         style={{ scrollMarginTop: "80px" }}
-        className="w-full px-0 py-10 pb-0"
+        className="w-full min-h-screen px-0 py-10 pb-0"
       >
         <h2 className="text-4xl font-bold mb-6 text-center w-full">
           <span className="text-white-400">

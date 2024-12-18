@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
   return (
     <section
       id="contact-form"
-      className="relative min-h-screen flex items-center justify-center text-white py-12 sm:py-16"
+      className="relative min-h-screen flex items-center justify-center text-white py-12 sm:py-16 mt-20"
     >
       <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
       <Image

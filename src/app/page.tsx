@@ -10,6 +10,9 @@ import PanZoomGallery from "./components/PanZoomGallery";
 import ContactForm from "./components/ContactForm";
 import AboutUs from "./components/AboutUs";
 import CharterSection from "./components/CharterSection";
+import FoodAndMassageSection from "./components/FoodAndMassage";
+import HeroDoveHunting from "./components/HeroDoveHunting";
+import HeroPigeonHunting from "./components/HeroPigeonHunting";
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -29,6 +32,9 @@ const Home: React.FC = () => {
       <HeroLodge />
       <PanZoomGallery />
       <Gallery />
+      <FoodAndMassageSection />
+      <HeroDoveHunting />
+      <HeroPigeonHunting />
       <CharterSection />
       <ContactForm />
       <Footer />
