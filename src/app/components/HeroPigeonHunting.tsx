@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
           className="z-0"
           priority
         />
-        <div className="relative z-20 text-center md:justify-start md:mx-10 px-2 md:px-8 pb-10">
+        <div className="relative z-20 md:justify-start md:mx-10 px-2 md:px-8 pb-10">
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             {t('Pigeon')}
