@@ -11,16 +11,11 @@ const AboutUs = () => {
   const { t } = useTranslation();
 
   const FoodAndWineDescription = t(
-    `At ZEKE & ZEKE We pride ourselves in our Fine dining and curated wine selection. This region is known as the best 
-    “beef country” in Argentina, and as such, we purchase our beef from the most respected butcher in Cordoba. Our 
-    first-class, 5-star chef will delight you with his incredible presentation of freshly prepared and delicious meals, 
-    each dish is a celebration of flavors, with fresh, local ingredients transformed into sophisticated and delicious 
-    creations.`,
+    `At ZEKE & ZEKE We pride ourselves in our Fine dining and curated wine selection. This region is known as the best “beef country” in Argentina, and as such, we purchase our beef from the most respected butcher in Cordoba. Our first-class, 5-star chef will delight you with his incredible presentation of freshly prepared and delicious meals, each dish is a celebration of flavors, with fresh, local ingredients transformed into sophisticated and delicious creations.`,
   );
 
   const MassageDescription = t(
-    `After an intense day of hunting, enjoy an upper or full body massage from one of our professionally trained massage 
-    therapists. Their services can be booked upon request.`,
+    `After an intense day of hunting, enjoy an upper or full body massage from one of our professionally trained massage therapists. Their services can be booked upon request.`,
   );
 
   return (
