@@ -28,17 +28,20 @@ const AboutUs = () => {
       {/* Added padding-top here */}
       <section className="flex flex-col md:flex-row">
         <Fade bottom duration={1000} delay={400}>
-          <div className="md:w-1/2 flex flex-col justify-center p-8 px-4 md:px-8">
-            <h2 className="text-4xl font-bold mb-6 text-left">
+          <div className="md:w-1/2 flex flex-col justify-center px-4 md:px-8">
+            <h2 className="text-4xl font-bold text-left">
               <span className="text-white-400">{t("About Us")}</span>
               <hr className="w-20 mt-3 bg-primary h-1" />
             </h2>
-            <p className="text-gray-300 text-lg mb-8" style={{ whiteSpace: "pre-wrap" }}>
+            <p className="text-gray-300 text-lg " style={{ whiteSpace: "pre-wrap" }}>
               {aboutUsDescription1}
+            </p>
+            <p className="text-gray-300 text-lg " style={{ whiteSpace: "pre-wrap" }}>
+              {aboutUsDescription2}
             </p>
           </div>
 
-          <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
+          <div className="md:w-1/2 relative flex items-end text-center md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)] z-10">
             <Image
               src={cazadorImage}
               alt="About Us"
@@ -46,32 +49,18 @@ const AboutUs = () => {
               objectFit="cover"
               className="rounded-tl-3xl rounded-bl-3xl rounded-br-none" // Increased rounding for top left and bottom left
             />
+
+            <div className="relative z-10">
+              <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+              <p className="text-white text-lg text-shadow z-20" style={{ whiteSpace: "pre-wrap" }}>
+                {enhancedDescription}
+              </p>
+            </div>
+
           </div>
         </Fade>
       </section>
 
-      <section className="flex flex-col md:flex-row mt-10">
-        <div className="md:w-1/2 relative md:max-w-[60%] md:max-h-[75vh] h-80 md:h-[calc(100vh-80px)]">
-          <Image
-            src={foundersImage2}
-            alt="Founders"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-tr-3xl rounded-br-3xl rounded-bl-none" // Increased rounding for top right and bottom right
-          />
-        </div>
-
-        <div className="md:w-1/2 flex flex-col justify-center p-8 px-4 md:px-8">
-          <Fade bottom duration={1000} delay={400}>
-            <p className="text-gray-300 text-lg mb-8" style={{ whiteSpace: "pre-wrap" }}>
-              {aboutUsDescription2}
-            </p>
-            <p className="text-gray-300 text-lg mb-8" style={{ whiteSpace: "pre-wrap" }}>
-              {enhancedDescription}
-            </p>
-          </Fade>
-        </div>
-      </section>
     </div>
   );
 };

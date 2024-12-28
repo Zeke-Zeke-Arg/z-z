@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import FoodAndWineImage from "../assets/images/FoodAndWine.webp";
-import MassageImage2 from "../assets/images/masaje1.webp";
+import MassageImage2 from "../assets/images/masaje3b.webp";
 
 import Fade from "react-reveal/Fade";
 
