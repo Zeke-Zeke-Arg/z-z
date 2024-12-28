@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import cazadorImage from "../assets/images/about us white.webp";
-import foundersImage2 from "../assets/images/Z&Z-founders-black.webp";
 
 import Fade from "react-reveal/Fade";
 
